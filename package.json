@@ -14,13 +14,18 @@
     "simple",
     "great",
     "lightweight",
-    "nice",
-    "looking"
+    "nice"
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mux-mux/portfolio/issues"
   },
-  "homepage": "https://github.com/mux-mux/portfolio#readme"
+  "homepage": "https://github.com/mux-mux/portfolio#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "node-sass": "^8.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
+  }
 }
