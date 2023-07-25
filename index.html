@@ -7,5 +7,91 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__">
+            <div class="nav__logo">
+              <img src="assets/logo.png" alt="mykhaylo`s photo" class="nav__logo-img" />
+            </div>
+            <div class="nav__text">
+              <span class="nav__text-name">Mykhaylo Kobylyukh</span>
+              <a href="assets/resume.pdf" class="nav__text-resume">resume</a>
+            </div>
+          </div>
+          <div class="nav__menu">
+            <ul class="nav__menu-list">
+              <li class="nav__menu-item"><a href="#home" class="nav__menu-link">Home</a></li>
+              <li class="nav__menu-item"><a href="#about" class="nav__menu-link">About</a></li>
+              <li class="nav__menu-item">
+                <a href="#projects" class="nav__menu-link">Projects</a>
+              </li>
+              <li class="nav__menu-item"><a href="#contact" class="nav__menu-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="hambuger"></div>
+          <div class="nav__mobile">
+            <ul class="nav__mobile-list">
+              <li class="nav__mobile-item"><a href="#home" class="nav__mobile-link"></a></li>
+              <li class="nav__mobile-item"><a href="#about" class="nav__mobile-link"></a></li>
+              <li class="nav__mobile-item"><a href="#projects" class="nav__mobile-link"></a></li>
+              <li class="nav__mobile-item"><a href="" class="nav__mobile-link"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="hero">
+          <ul class="social hero__social">
+            <li class="social__item">
+              <a href="#github" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#telegram" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#viber" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#linkedin" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#email" class="social__link"><i class="fa"></i></a>
+            </li>
+          </ul>
+          <div class="hero__intro">
+            <h1 class="hero__intro-text">
+              Hi, my name is <span class="text-color-main">Mykhaylo Kobylyukh</span>
+              <br />
+              I`m the WebDeveloper.
+            </h1>
+            <div class="hero__intro-media">
+              <img src="assets/cartoon.png" alt="" class="hero__title-cartoon" />
+            </div>
+            <button class="cta-btn main__cta">Projects</button>
+          </div>
+        </section>
+      </div>
+      <section class="about">
+        <div class="container">
+          <h2 class="section__title title-white">About me</h2>
+          <div class="about__wrapper">
+            <div class="about__media">
+              <img src="assets/about.jpg" alt="mykhaylo kobylyukh photo" class="about__img" />
+            </div>
+            <div class="about__info">
+              <p class="about__info-text">
+                I`m a fast learning person with a solid level of responsibility and self managment
+              </p>
+              <p class="about__info-text">My goal is to become a Pro in React</p>
+              <button class="cta-btn white__btn">View Resume</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
