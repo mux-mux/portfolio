@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="simple, nice, lightweight mykhaylo`s portfolio" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
-  <body>
-    <header class="header">
+  <body id="home">
+    <header>
       <div class="container">
         <nav class="nav">
           <div class="nav__">
             <div class="nav__logo">
-              <img src="assets/logo.png" alt="mykhaylo`s photo" class="nav__logo-img" />
+              <img src="./assets/logo.png" alt="mykhaylo`s photo" class="nav__logo-img" />
             </div>
             <div class="nav__text">
               <span class="nav__text-name">Mykhaylo Kobylyukh</span>
-              <a href="assets/resume.pdf" class="nav__text-resume">resume</a>
+              <a href="./assets/resume.pdf" class="nav__text-resume">resume</a>
             </div>
           </div>
           <div class="nav__menu">
@@ -42,7 +42,7 @@
         </nav>
       </div>
     </header>
-    <main class="main">
+    <main id="main">
       <div class="container">
         <section class="hero">
           <ul class="social hero__social">
@@ -69,29 +69,143 @@
               I`m the WebDeveloper.
             </h1>
             <div class="hero__intro-media">
-              <img src="assets/cartoon.png" alt="" class="hero__title-cartoon" />
+              <img src="./assets/cartoon.png" alt="" class="hero__title-cartoon" />
             </div>
-            <button class="cta-btn main__cta">Projects</button>
+            <a href="#projects" class="cta-btn main__cta">Projects</a>
           </div>
         </section>
       </div>
-      <section class="about">
+      <section id="about">
         <div class="container">
           <h2 class="section__title title-white">About me</h2>
           <div class="about__wrapper">
             <div class="about__media">
-              <img src="assets/about.jpg" alt="mykhaylo kobylyukh photo" class="about__img" />
+              <img src="./assets/about.jpg" alt="mykhaylo kobylyukh photo" class="about__img" />
             </div>
             <div class="about__info">
               <p class="about__info-text">
                 I`m a fast learning person with a solid level of responsibility and self managment
               </p>
               <p class="about__info-text">My goal is to become a Pro in React</p>
-              <button class="cta-btn white__btn">View Resume</button>
+              <a href="#" target="_blank" class="cta-btn white__btn">View Resume</a>
             </div>
           </div>
         </div>
       </section>
+      <section id="projects">
+        <div class="container">
+          <h2 class="section__title title-black">Projects</h2>
+          <div class="projects__wrapper">
+            <div class="projects__info">
+              <h3 class="projects__info-title">Project</h3>
+              <p class="projects__info-descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor atque rerum aliquam
+                necessitatibus ab nesciunt! Reprehenderit reiciendis vero, ipsum quo recusandae
+                animi velit sed consectetur neque eveniet iure a iste.
+              </p>
+              <a href="#" target="_blank" class="cta-btn main__cta">See Live</a>
+              <a href="#" class="cta-btn text-color-main">Source Code</a>
+            </div>
+            <div class="projects__media">
+              <a href="#" target="_blank" class="projects__media-link">
+                <img src="./assets/" alt="project" class="projects__media-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h2 class="section__title">Contact</h2>
+          <form action="#" class="contact__form">
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-label">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="contact__form-input"
+                placeholder="Enter Your Name"
+                required
+              />
+            </div>
+            <div class="contact__form-field">
+              <label for="email" class="contact__form-label">Email</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                class="contact__form-input"
+                placeholder="Enter Your Email"
+                required
+              />
+            </div>
+            <div class="contact__form-field">
+              <label for="message" class="contact__form-label">Message</label>
+              <textarea
+                type="text"
+                name="message"
+                id="message"
+                class="contact__form-input"
+                cols="30"
+                rows="10"
+                placeholder="Enter Your Message"
+                required
+              ></textarea>
+            </div>
+            <button class="cta-btn white__btn">Submit</button>
+          </form>
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="container">
+          <a href="#home" class="to-top"><i class="fa"></i></a>
+          <ul class="social footer__social">
+            <li class="social__item">
+              <a href="#github" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#telegram" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#viber" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#linkedin" class="social__link"><i class="fa"></i></a>
+            </li>
+            <li class="social__item">
+              <a href="#email" class="social__link"><i class="fa"></i></a>
+            </li>
+          </ul>
+          <hr />
+          <h4 class="footer__heading">Done Projects not included in</h4>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="" class="footer__list-link">Brain-games</a> Five JS Console-based
+              arithmetical games. User switch game -> Get question -> Input answer -> Check the
+              result -> Next question || Show message
+            </li>
+            <li class="footer__list-item">
+              <a href="" class="footer__list-link">Coffee Shop</a> Simple React Coffee Shop.
+              HTML&CSS to React Components. Added Navigation Routing. Added Routing to Product
+              Page(useContext)
+            </li>
+            <li class="footer__list-item">
+              <a href="" class="footer__list-link">Marvel Comics</a> Comics List SPA. Classes to
+              Hooks, JSON Fetch, Load More button
+            </li>
+          </ul>
+          <hr />
+          <h4 class="footer__heading">Currently working on</h4>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a href="" class="footer__list-link">JS Kanban Project</a> - Creating base structure
+            </li>
+          </ul>
+          <hr />
+          <span class="footer__copy">&copy; 2023</span>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
