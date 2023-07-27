@@ -1,0 +1,214 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+.text-gradient-main {
+  color: #8ca6db;
+  -webkit-text-fill-color: #8ca6db;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .text-gradient-main {
+    background-image: linear-gradient(135deg, #606c88 0%, #8ca6db 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .text-gradient-main {
+    background-image: none;
+    -webkit-text-fill-color: #8ca6db;
+  }
+}
+.text-gradient-main:hover {
+  transform: translateX(2px);
+}
+
+.section__title {
+  margin: 0px;
+  margin-bottom: 4.5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 37.5em) {
+  .section__title {
+    font-size: 2.8rem;
+  }
+}
+
+.title-white {
+  color: #fff;
+}
+
+.title-dark {
+  color: #272341;
+}
+
+.paragraph__text {
+  font-size: 1.6rem;
+}
+
+.paragraph-white {
+  color: #fff;
+}
+
+.cta__btn {
+  display: inline-block;
+  position: relative;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+}
+.cta__btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+
+.main-btn {
+  color: #8ca6db;
+  -webkit-text-fill-color: #8ca6db;
+  border-width: 2px;
+  border-style: solid;
+  -moz-border-image: -moz-linear-gradient(135deg, #606c88 0%, #8ca6db 100%);
+  -webkit-border-image: -webkit-linear-gradient(135deg, #606c88 0%, #8ca6db 100%);
+  border-image: linear-gradient(135deg, #606c88 0%, #8ca6db 100%);
+  -webkit-border-image-slice: 1;
+  border-image-slice: 1;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .main-btn {
+    background-image: linear-gradient(135deg, #606c88 0%, #8ca6db 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .main-btn {
+    color: #8ca6db !important;
+  }
+  .main-btn:hover {
+    color: #fff !important;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .main-btn {
+    background-image: none;
+    border: 2px solid #8ca6db;
+    -webkit-text-fill-color: #8ca6db;
+  }
+}
+.main-btn::after {
+  background-image: linear-gradient(135deg, #606c88 0%, #8ca6db 100%);
+}
+@media only screen and (max-width: 37.5em) {
+  .main-btn::after {
+    background-image: none;
+  }
+}
+.main-btn:hover {
+  -webkit-text-fill-color: #fff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .main-btn:hover {
+    -webkit-text-fill-color: #8ca6db;
+  }
+}
+.main-btn:hover::after {
+  width: 100%;
+}
+
+.white-btn {
+  color: #fff;
+  border: 2px solid #fff;
+}
+.white-btn::after {
+  background: #fff;
+}
+.white-btn:hover {
+  color: #8ca6db;
+  text-decoration: none;
+}
+.white-btn:hover::after {
+  width: 100%;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.social__item {
+  transition: all 0.2s ease-in;
+}
+.social__item:hover {
+  transform: translateY(-2px);
+}
+.social__link {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.footer__social .social__link {
+  color: #fff;
+}
+
+.hero__social {
+  flex-direction: column;
+  position: absolute;
+  left: 1rem;
+}
+.hero__social .social__link {
+  color: #272341;
+}
+
+.hero {
+  position: relative;
+}

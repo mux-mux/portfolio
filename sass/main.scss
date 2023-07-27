@@ -1,0 +1,17 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+
+@import 'components/gradients';
+@import 'components/headings';
+@import 'components/paragraphs';
+@import 'components/buttons';
+@import 'components/socials';
+
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/projects';
+@import 'sections/contact';
+@import 'sections/footer';
