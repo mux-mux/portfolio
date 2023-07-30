@@ -16,66 +16,71 @@
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
   <body id="home">
-    <header>
+    <header class="header">
       <div class="container">
-        <nav class="nav">
-          <div class="nav__">
-            <div class="nav__logo">
-              <img src="./assets/logo.png" alt="mykhaylo`s photo" class="nav__logo-img" />
-            </div>
-            <div class="nav__text">
-              <span class="nav__text-name">Mykhaylo Kobylyukh</span>
-              <a href="./assets/resume.pdf" class="nav__text-resume">resume</a>
-            </div>
+        <div class="header__container">
+          <div class="header__container-logo">
+            <a href="#home" class="header__logo">
+              <img src="./assets/logo_photo.png" alt="mykhaylo`s photo" class="header__logo-img" />
+            </a>
+            <a href="./assets/resume.pdf" target="_blank" class="header__logo-resume">
+              <span class="header__logo-name">Mykhaylo's Kobylyukh</span>
+              <div class="header__logo-subtext"><i class="fa-regular fa-file-pdf"></i>resume</div>
+            </a>
           </div>
-          <div class="nav__menu">
-            <ul class="nav__menu-list">
-              <li class="nav__menu-item">
-                <a href="#home" class="nav__menu-link"
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a href="#home" class="header__menu-link"
                   ><i class="fa-regular fa-circle-up"></i>Home</a
                 >
               </li>
-              <li class="nav__menu-item">
-                <a href="#about" class="nav__menu-link"><i class="fa-regular fa-file"></i>About</a>
-              </li>
-              <li class="nav__menu-item">
-                <a href="#projects" class="nav__menu-link"
-                  ><i class="fa-solid fa-code"></i>Projects</a
-                >
-              </li>
-              <li class="nav__menu-item">
-                <a href="#contact" class="nav__menu-link"
-                  ><i class="fa-regular fa-paper-plane"></i>Contact</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="hambuger"></div>
-          <div class="nav__mobile">
-            <ul class="nav__mobile-list">
-              <li class="nav__mobile-item">
-                <a href="#home" class="nav__mobile-link"
-                  ><i class="fa-regular fa-circle-up"></i>Home</a
-                >
-              </li>
-              <li class="nav__mobile-item">
-                <a href="#about" class="nav__mobile-link"
+              <li class="header__menu-item">
+                <a href="#about" class="header__menu-link"
                   ><i class="fa-regular fa-file"></i>About</a
                 >
               </li>
-              <li class="nav__mobile-item">
-                <a href="#projects" class="nav__mobile-link"
+              <li class="header__menu-item">
+                <a href="#projects" class="header__menu-link"
                   ><i class="fa-solid fa-code"></i>Projects</a
                 >
               </li>
-              <li class="nav__mobile-item">
-                <a href="" class="nav__mobile-link"
+              <li class="header__menu-item">
+                <a href="#contact" class="header__menu-link"
+                  ><i class="fa-regular fa-paper-plane"></i>Contact</a
+                >
+              </li>
+            </ul>
+            <div class="header__hamburger">
+              <i class="fa-solid fa-bars header__hamburger-open"></i>
+              <i class="fa-regular fa-circle-xmark header__hamburger-close d-none"></i>
+            </div>
+          </nav>
+          <div class="header__mobile">
+            <ul class="header__mobile-list">
+              <li class="header__mobile-item">
+                <a href="#home" class="header__mobile-link"
+                  ><i class="fa-regular fa-circle-up"></i>Home</a
+                >
+              </li>
+              <li class="header__mobile-item">
+                <a href="#about" class="header__mobile-link"
+                  ><i class="fa-regular fa-file"></i>About</a
+                >
+              </li>
+              <li class="header__mobile-item">
+                <a href="#projects" class="header__mobile-link"
+                  ><i class="fa-solid fa-code"></i>Projects</a
+                >
+              </li>
+              <li class="header__mobile-item">
+                <a href="" class="header__mobile-link"
                   ><i class="fa-regular fa-paper-plane"></i>Contact</a
                 >
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
       </div>
     </header>
     <main id="main">
