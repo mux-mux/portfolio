@@ -104,17 +104,13 @@
     display: none;
     font-size: 2.6rem;
 
-    padding: 2.2rem 0;
-
     @include respond(phone) {
       display: block;
     }
 
-    &-open {
-      width: 100%;
-    }
+    &-open,
     &-close {
-      width: 100%;
+      padding: 3rem 2.2rem;
     }
   }
   /*MOBILE NAV*/

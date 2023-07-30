@@ -242,15 +242,12 @@ textarea {
       margin-right: 4px; }
   .header__hamburger {
     display: none;
-    font-size: 2.6rem;
-    padding: 2.2rem 0; }
+    font-size: 2.6rem; }
     @media only screen and (max-width: 37.5em) {
       .header__hamburger {
         display: block; } }
-    .header__hamburger-open {
-      width: 100%; }
-    .header__hamburger-close {
-      width: 100%; }
+    .header__hamburger-open, .header__hamburger-close {
+      padding: 3rem 2.2rem; }
   .header__mobile {
     display: none; }
 
