@@ -1,3 +1,26 @@
 .hero {
   position: relative;
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+
+  &__intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-wrapper {
+      display: flex;
+      margin-bottom: 3rem;
+    }
+
+    &-media {
+      margin-left: 5rem;
+    }
+
+    &-img {
+      border-radius: 50%;
+    }
+  }
 }
