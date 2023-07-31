@@ -82,6 +82,22 @@ textarea {
 .paragraph-white {
   color: #fff; }
 
+.logo {
+  border-radius: 50%;
+  background-color: #8ca6db; }
+  .logo-header {
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    margin-right: 1.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .logo-header {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 1.2rem; } }
+  .logo-hero {
+    margin-left: 5rem; }
+
 .cta__btn {
   display: inline-block;
   position: relative;
@@ -182,12 +198,7 @@ textarea {
   width: 100%;
   z-index: 1000;
   background: #fff;
-  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
-  /*CONTAINER*/
-  /*LOGO*/
-  /*MENU*/
-  /*HAMBURGER*/
-  /*MOBILE NAV*/ }
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1); }
   .header__container {
     display: flex;
     align-items: center;
@@ -196,22 +207,10 @@ textarea {
     @media only screen and (max-width: 56.25em) {
       .header__container {
         padding: 0 2rem; } }
-    .header__container-logo {
-      display: flex;
-      align-items: center;
-      color: #333; }
   .header__logo {
-    width: 5rem;
-    height: 5rem;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 1.5rem;
-    background: #8ca6db; }
-    @media only screen and (max-width: 56.25em) {
-      .header__logo {
-        width: 4.5rem;
-        height: 4.5rem;
-        margin-right: 1.2rem; } }
+    display: flex;
+    align-items: center;
+    color: #333; }
     .header__logo-name {
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -271,8 +270,3 @@ textarea {
     .hero__intro-wrapper {
       display: flex;
       margin-bottom: 3rem; }
-    .hero__intro-media {
-      margin-left: 5rem; }
-    .hero__intro-img {
-      background: #8ca6db;
-      border-radius: 50%; }
