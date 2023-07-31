@@ -5,17 +5,6 @@
   background: #fff;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 100%;
-  //   width: 100%;
-  //   left: 0;
-  //   height: 1px;
-  //   background: linear-gradient(to right, $secondary-color, $primary-color);
-  // }
-
-  /*CONTAINER*/
   &__container {
     display: flex;
     align-items: center;
@@ -24,27 +13,12 @@
     @include respond(tab-portrait) {
       padding: 0 2rem;
     }
-
-    &-logo {
-      display: flex;
-      align-items: center;
-      color: $main-color;
-    }
   }
-  /*LOGO*/
-  &__logo {
-    width: 5rem;
-    height: 5rem;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 1.5rem;
-    background: $primary-color;
 
-    @include respond(tab-portrait) {
-      width: 4.5rem;
-      height: 4.5rem;
-      margin-right: 1.2rem;
-    }
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: $main-color;
 
     &-name {
       font-size: 1.4rem;
@@ -67,7 +41,7 @@
       }
     }
   }
-  /*MENU*/
+
   &__menu {
     &-list {
       display: flex;
@@ -99,7 +73,7 @@
       }
     }
   }
-  /*HAMBURGER*/
+
   &__hamburger {
     display: none;
     font-size: 2.6rem;
@@ -113,7 +87,7 @@
       padding: 3rem 2.2rem;
     }
   }
-  /*MOBILE NAV*/
+
   &__mobile {
     display: none;
   }
