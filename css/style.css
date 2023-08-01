@@ -19,7 +19,11 @@ html {
 body {
   box-sizing: border-box;
   text-align: center;
-  font-family: 'Oswald', sans-serif; }
+  font-family: 'Oswald', sans-serif;
+  color: #333; }
+
+section {
+  padding: 5rem 0; }
 
 img {
   width: 100%;
@@ -61,7 +65,6 @@ textarea {
   font-weight: 700; }
 
 .section__title {
-  margin: 0px;
   margin-bottom: 4.5rem;
   font-size: 4rem;
   font-weight: bold;
@@ -75,6 +78,9 @@ textarea {
 
 .title-dark {
   color: #272341; }
+
+.heading-tertiary {
+  font-size: 2.4rem; }
 
 .paragraph__text {
   font-size: 1.6rem; }
@@ -209,8 +215,7 @@ textarea {
         padding: 0 2rem; } }
   .header__logo {
     display: flex;
-    align-items: center;
-    color: #333; }
+    align-items: center; }
     .header__logo-name {
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -233,7 +238,6 @@ textarea {
     padding: 2.2rem 3rem;
     display: inline-block;
     font-size: 1.6rem;
-    color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -270,3 +274,21 @@ textarea {
     .hero__intro-wrapper {
       display: flex;
       margin-bottom: 3rem; }
+
+.about {
+  background-color: #8ca6db;
+  background-image: linear-gradient(135deg, #8ca6db 0%, #606c88 100%);
+  color: #fff;
+  height: 100%;
+  border-top: 0px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding-bottom: 10%; }
+  @media only screen and (max-width: 75em) {
+    .about {
+      height: 100%;
+      -webkit-clip-path: none;
+      clip-path: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .about__content {
+      padding-bottom: 5rem; } }
