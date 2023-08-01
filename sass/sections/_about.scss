@@ -18,5 +18,21 @@
     @include respond(phone) {
       padding-bottom: 5rem;
     }
+
+    &-skills {
+      display: inline-block;
+      text-align: left;
+    }
+
+    &-skill {
+      font-size: 1.4rem;
+      margin: 2px 0;
+
+      i {
+        width: 2.5rem;
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
   }
 }
