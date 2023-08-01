@@ -16,6 +16,11 @@ body {
   box-sizing: border-box;
   text-align: center;
   font-family: 'Oswald', sans-serif;
+  color: $main-color;
+}
+
+section {
+  padding: $margin-section-title 0;
 }
 
 img {
