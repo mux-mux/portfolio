@@ -16,7 +16,7 @@
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
   <body id="home">
-    <header class="header">
+    <header id="header">
       <div class="header__container">
         <div class="header__logo">
           <a href="#home" class="logo-header">
@@ -80,7 +80,7 @@
       </div>
     </header>
     <main id="main">
-      <section class="hero">
+      <section id="hero">
         <div class="container">
           <ul class="social hero__social">
             <li class="social__item">
@@ -114,7 +114,7 @@
               <h1 class="heading-primary mb-30">
                 Hi, my name is <span class="text-gradient-main">Mykhaylo Kobylyukh</span>
                 <br />
-                I`m a JavaScript Developer
+                I`m a Web Developer you are looking for
               </h1>
               <a href="#projects" class="cta__btn main-btn">See My Projects</a>
             </div>
@@ -124,7 +124,7 @@
           </div>
         </div>
       </section>
-      <section id="about" class="about">
+      <section id="about">
         <div class="container">
           <h2 class="section__title title-white">About me</h2>
           <div class="about__content">
@@ -197,7 +197,7 @@
           </div>
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" class="contact">
         <div class="container">
           <h2 class="section__title title-white">Contact</h2>
           <form action="#" class="contact__form">
@@ -239,62 +239,64 @@
           </form>
         </div>
       </section>
-      <footer id="footer">
-        <div class="container">
-          <a href="#home" class="to-top"><i class="fa-solid fa-angles-up"></i></a>
-          <ul class="social footer__social">
-            <li class="social__item">
-              <a href="https://github.com/mux-mux" class="social__link"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="https://t.me/mikekoby" class="social__link"
-                ><i class="fa-brands fa-telegram"></i
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="viber://chat?number=%2B380677159565" class="social__link"
-                ><i class="fa-brands fa-viber"></i
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="https://www.linkedin.com/in/mykhaylo-kobylyukh/" class="social__link"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="mailto:kobylyukh@gmail.com" class="social__link"
-                ><i class="fa-solid fa-envelope"></i
-              ></a>
-            </li>
-          </ul>
-          <hr />
-          <h4 class="footer__heading">Done Projects not included in</h4>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">Brain-games</a> Five JS Console-based
-              arithmetical games. User switch game -> Get question -> Input answer -> Check the
-              result -> Next question || Show message
-            </li>
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">Marvel Comics</a> Comics List SPA. Classes to
-              Hooks, JSON Fetch, Load More button
-            </li>
-          </ul>
-          <hr />
-          <h4 class="footer__heading">Currently working on</h4>
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">Own Portfolio Website</a>
-            </li>
-          </ul>
-          <hr />
-          <a href="https://github.com/mux-mux/portfolio" target="_blank" class="footer__copy"
-            >&copy; 2023 This Project <i class="fa-brands fa-git"></i
-          ></a>
-        </div>
-      </footer>
     </main>
+    <footer id="footer">
+      <div class="container">
+        <a href="#home" class="to-top"><i class="fa-solid fa-angles-up"></i></a>
+        <ul class="social footer__social">
+          <li class="social__item">
+            <a href="https://github.com/mux-mux" class="social__link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="https://t.me/mikekoby" class="social__link"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="viber://chat?number=%2B380677159565" class="social__link"
+              ><i class="fa-brands fa-viber"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="https://www.linkedin.com/in/mykhaylo-kobylyukh/" class="social__link"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li class="social__item">
+            <a href="mailto:kobylyukh@gmail.com" class="social__link"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+        </ul>
+        <hr />
+        <h4 class="footer__heading">Done Projects not included in</h4>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a href="" class="footer__list-link">Brain-games</a> Five JS Console-based arithmetical
+            games. User switch game -> Get question -> Input answer -> Check the result -> Next
+            question || Show message
+          </li>
+          <li class="footer__list-item">
+            <a href="" class="footer__list-link">Marvel Comics</a> Comics List SPA. Classes to
+            Hooks, JSON Fetch, Load More button
+          </li>
+        </ul>
+        <hr />
+        <h4 class="footer__heading">Currently working on</h4>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <a href="https://github.com/mux-mux/portfolio" class="footer__list-link"
+              >Portfolio Website <i class="fa-brands fa-git"></i>
+            </a>
+          </li>
+        </ul>
+        <hr />
+        <a href="https://github.com/mux-mux/portfolio" target="_blank" class="footer__copy"
+          >&copy; 2023 This Project <i class="fa-brands fa-git"></i>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>

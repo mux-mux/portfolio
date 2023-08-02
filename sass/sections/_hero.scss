@@ -1,9 +1,10 @@
-.hero {
+#hero {
   position: relative;
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
-
+}
+.hero {
   &__intro {
     position: absolute;
     top: 50%;

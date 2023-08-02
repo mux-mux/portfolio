@@ -1,4 +1,4 @@
-.about {
+#about {
   background-color: $primary-color;
   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   color: $white-color;
@@ -13,7 +13,9 @@
     -webkit-clip-path: none;
     clip-path: none;
   }
+}
 
+.about {
   &__content {
     @include respond(mobile) {
       padding-bottom: 5rem;
