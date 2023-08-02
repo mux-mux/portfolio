@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/98ed2c2c6d.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
   <body id="home">
@@ -116,7 +117,7 @@
                 <br />
                 I`m a Web Developer you are looking for
               </h1>
-              <a href="#projects" class="cta__btn main-btn">See My Projects</a>
+              <a href="#projects" class="cta-btn main-btn">See My Projects</a>
             </div>
             <div class="logo-hero">
               <img src="./assets/main_photo.png" alt="" class="logo" />
@@ -158,7 +159,7 @@
               </li>
             </ul>
             <br />
-            <a href="#" target="_blank" class="cta__btn white-btn">View Resume</a>
+            <a href="#" target="_blank" class="cta-btn white-btn">View Resume</a>
           </div>
         </div>
       </section>
@@ -169,7 +170,7 @@
             <div class="projects__info">
               <h3 class="heading-tertiary mb-20">CofeeHouse</h3>
 
-              <h4 class="heading-quaternary mb-10">Stages</h4>
+              <span class="heading-quaternary mb-10">Stages</span>
               <ul>
                 <li class="projects__info-stage">HTML CSS from Mockup</li>
                 <li class="projects__info-stage">React Components from HTML CSS</li>
@@ -177,11 +178,11 @@
                 <li class="projects__info-stage">App Navigation Routing</li>
                 <li class="projects__info-stage">Product Card Opening Context</li>
               </ul>
-              <a href="#" target="_blank" class="cta__btn main-btn">See Live</a>
+              <a href="#" target="_blank" class="cta-btn main-btn">See Live</a>
               <a
                 href="https://github.com/mux-mux/react.CoffeeHouse"
                 target="_blank"
-                class="cta__btn text-gradient-main"
+                class="cta-btn text-gradient-main"
                 >Source Code</a
               >
             </div>
@@ -197,10 +198,10 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="contact">
+      <section id="contact">
         <div class="container">
           <h2 class="section__title title-white">Contact</h2>
-          <form action="#" class="contact__form">
+          <form action="#" class="contact__form" method="post">
             <div class="contact__form-field">
               <label for="name" class="contact__form-label">Name</label>
               <input
@@ -209,6 +210,8 @@
                 id="name"
                 class="contact__form-input"
                 placeholder="Enter Your Name"
+                minlength="2"
+                maxlength="90"
                 required
               />
             </div>
@@ -220,6 +223,8 @@
                 id="email"
                 class="contact__form-input"
                 placeholder="Enter Your Email"
+                title="Email format address@xx.xx"
+                pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
                 required
               />
             </div>
@@ -232,10 +237,11 @@
                 cols="30"
                 rows="10"
                 placeholder="Enter Your Message"
+                maxlength="1000"
                 required
               ></textarea>
             </div>
-            <button class="cta__btn main-btn">Submit</button>
+            <button class="cta-btn main-btn contact__btn">Submit</button>
           </form>
         </div>
       </section>
