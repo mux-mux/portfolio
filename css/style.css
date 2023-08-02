@@ -1,3 +1,6 @@
+.mb-30 {
+  margin-bottom: 30px !important; }
+
 .mb-20 {
   margin-bottom: 20px !important; }
 
@@ -109,6 +112,7 @@ textarea {
         height: 4.5rem;
         margin-right: 1.2rem; } }
   .logo-hero {
+    flex-shrink: 0;
     margin-left: 5rem; }
 
 .cta__btn {
@@ -277,10 +281,8 @@ textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
-    .hero__intro-wrapper {
-      display: flex;
-      margin-bottom: 3rem; }
+    transform: translate(-50%, -50%);
+    display: flex; }
 
 .about {
   background-color: #8ca6db;
