@@ -322,7 +322,8 @@ textarea {
 
 .projects__info {
   text-align: left;
-  flex: 0 0 auto; }
+  flex: 0 0 auto;
+  margin: 0 auto; }
   .projects__info-stage {
     font-size: 1.4rem; }
     .projects__info-stage:last-of-type {
