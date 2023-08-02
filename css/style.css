@@ -10,6 +10,9 @@
 .d-none {
   display: none !important; }
 
+.bolder {
+  font-weight: 900 !important; }
+
 *,
 *::after,
 *::before {
