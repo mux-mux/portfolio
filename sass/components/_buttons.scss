@@ -1,4 +1,4 @@
-.cta__btn {
+.cta-btn {
   display: inline-block;
   position: relative;
   padding: 0.8rem $default-font-size;
@@ -81,4 +81,9 @@
       width: 100%;
     }
   }
+}
+
+.contact__btn {
+  left: 50%;
+  transform: translateX(-50%);
 }
