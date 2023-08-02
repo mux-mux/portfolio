@@ -37,7 +37,7 @@
     }
   }
 
-  @include respond(phone) {
+  @include respond(mobile) {
     background-image: none;
     border: 2px solid $secondary-color;
     -webkit-text-fill-color: $secondary-color;
@@ -46,7 +46,7 @@
   &::after {
     background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
 
-    @include respond(phone) {
+    @include respond(mobile) {
       background-image: none;
     }
   }
@@ -55,7 +55,7 @@
     -webkit-text-fill-color: $white-color;
     text-decoration: none;
 
-    @include respond(phone) {
+    @include respond(mobile) {
       -webkit-text-fill-color: $secondary-color;
     }
 

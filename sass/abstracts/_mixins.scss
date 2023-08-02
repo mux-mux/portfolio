@@ -1,21 +1,21 @@
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
+  @if $breakpoint == mobile {
     @media only screen and (max-width: 37.5em) {
       @content;
     } //600px
   }
-  @if $breakpoint == tab-portrait {
+  @if $breakpoint == tablet {
     @media only screen and (max-width: 56.25em) {
       @content;
     } //900px
   }
-  @if $breakpoint == tab-landscape {
+  @if $breakpoint == laptop {
     @media only screen and (max-width: 75em) {
       @content;
     } //1200px
   }
   //1200-1800 overall styles
-  @if $breakpoint == big-desktop {
+  @if $breakpoint == UHD {
     @media only screen and (min-width: 112.5em) {
       @content;
     } //1800

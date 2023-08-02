@@ -8,14 +8,14 @@
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
 
-  @include respond(tab-landscape) {
+  @include respond(laptop) {
     height: 100%;
     -webkit-clip-path: none;
     clip-path: none;
   }
 
   &__content {
-    @include respond(phone) {
+    @include respond(mobile) {
       padding-bottom: 5rem;
     }
 
