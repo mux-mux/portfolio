@@ -19,8 +19,14 @@ body {
   color: $main-color;
 }
 
+.container {
+  max-width: 120rem;
+  margin: auto;
+  width: 95%;
+}
+
 section {
-  padding: $margin-section-title 0;
+  padding: $section-top-bottom 0;
 }
 
 img {

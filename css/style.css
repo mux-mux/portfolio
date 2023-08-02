@@ -25,6 +25,11 @@ body {
   font-family: 'Oswald', sans-serif;
   color: #333; }
 
+.container {
+  max-width: 120rem;
+  margin: auto;
+  width: 95%; }
+
 section {
   padding: 5rem 0; }
 
@@ -56,10 +61,6 @@ textarea {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent; } }
-  @media only screen and (max-width: 37.5em) {
-    .text-gradient-main {
-      background-image: none;
-      -webkit-text-fill-color: #606c88; } }
   .text-gradient-main:hover {
     transform: translateX(2px); }
 
@@ -74,7 +75,7 @@ textarea {
   text-transform: uppercase; }
   @media only screen and (max-width: 37.5em) {
     .section__title {
-      font-size: 2.8rem; } }
+      font-size: 3rem; } }
 
 .title-white {
   color: #fff; }
@@ -83,7 +84,10 @@ textarea {
   color: #272341; }
 
 .heading-tertiary {
-  font-size: 2.4rem; }
+  font-size: 2.8rem; }
+
+.heading-quaternary {
+  font-size: 2rem; }
 
 .paragraph__text {
   font-size: 1.8rem; }
@@ -301,7 +305,26 @@ textarea {
   .about__content-skill {
     font-size: 1.4rem;
     margin: 2px 0; }
+    .about__content-skill:last-of-type {
+      margin-bottom: 3rem; }
     .about__content-skill i {
       width: 2.5rem;
       font-size: 2rem;
       margin-right: 1rem; }
+
+.projects__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 5rem; }
+
+.projects__info {
+  text-align: left;
+  flex: 0 0 auto; }
+  .projects__info-stage {
+    font-size: 1.4rem; }
+    .projects__info-stage:last-of-type {
+      margin-bottom: 3rem; }
+
+.projects__media {
+  flex: 1 60rem; }

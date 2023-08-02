@@ -1,0 +1,25 @@
+.projects {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+
+  &__info {
+    text-align: left;
+    flex: 0 0 auto;
+
+    &-stage {
+      font-size: $list-font-size;
+
+      &:last-of-type {
+        margin-bottom: $list-margin-bottom;
+      }
+    }
+  }
+
+  &__media {
+    flex: 1 60rem;
+  }
+}
