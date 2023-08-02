@@ -209,6 +209,8 @@
                 id="name"
                 class="contact__form-input"
                 placeholder="Enter Your Name"
+                minlength="2"
+                maxlength="90"
                 required
               />
             </div>
@@ -220,6 +222,8 @@
                 id="email"
                 class="contact__form-input"
                 placeholder="Enter Your Email"
+                title="Email format address@xx.xx"
+                pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
                 required
               />
             </div>
@@ -232,6 +236,7 @@
                 cols="30"
                 rows="10"
                 placeholder="Enter Your Message"
+                maxlength="1000"
                 required
               ></textarea>
             </div>
