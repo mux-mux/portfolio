@@ -94,7 +94,7 @@ textarea {
   font-size: 2.8rem; }
 
 .heading-quaternary {
-  font-size: 2rem; }
+  font-size: 1.8rem; }
 
 .paragraph__text {
   font-size: 1.8rem; }
@@ -205,18 +205,14 @@ textarea {
   .social__link {
     font-size: 3rem;
     line-height: 3rem; }
-
-.footer__social .social__link {
-  color: #fff; }
-
-.hero__social {
-  flex-direction: column;
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%); }
-  .hero__social .social__link {
-    color: #272341; }
+  .social-hero {
+    flex-direction: column;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%); }
+  .social-footer {
+    padding: 1rem 0; }
 
 #header {
   position: fixed;
@@ -342,6 +338,10 @@ textarea {
   text-align: left;
   flex: 0 0 auto;
   margin: 0 auto; }
+  .projects__info-stages {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700; }
   .projects__info-stage {
     font-size: 1.4rem; }
     .projects__info-stage:last-of-type {
@@ -395,3 +395,27 @@ textarea {
     border-radius: 5px; }
     .contact__form-input::placeholder {
       color: #999; }
+
+#footer {
+  background: #555;
+  color: #fff; }
+  #footer .container > :nth-child(2n) {
+    background: radial-gradient(circle, #666666 0%, #555555 40%); }
+
+.footer__divider {
+  padding: 1.5rem 0; }
+
+.footer__to-top {
+  display: inline-block;
+  padding: 4rem;
+  font-size: 2rem; }
+  .footer__to-top i {
+    transition: all 0.2s ease-in; }
+    .footer__to-top i:hover {
+      transform: translateY(-2px); }
+
+.footer__list {
+  font-size: 1.4rem; }
+
+.footer-copy {
+  font-size: 1.2rem; }
