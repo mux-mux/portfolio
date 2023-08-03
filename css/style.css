@@ -53,6 +53,7 @@ li {
 
 button {
   border: none;
+  background: none;
   cursor: pointer; }
 
 textarea {
@@ -75,7 +76,7 @@ textarea {
   font-weight: 700; }
 
 .section__title {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase; }
@@ -118,7 +119,7 @@ textarea {
     flex-shrink: 0;
     margin-left: 5rem; }
 
-.cta__btn {
+.cta-btn {
   display: inline-block;
   position: relative;
   padding: 0.8rem 1.8rem;
@@ -127,7 +128,7 @@ textarea {
   line-height: 1;
   z-index: 1;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s; }
-  .cta__btn::after {
+  .cta-btn::after {
     content: '';
     display: block;
     position: absolute;
@@ -188,6 +189,10 @@ textarea {
     text-decoration: none; }
     .white-btn:hover::after {
       width: 100%; }
+
+.contact__btn {
+  left: 50%;
+  transform: translateX(-50%); }
 
 .social {
   display: flex;
@@ -344,3 +349,49 @@ textarea {
 
 .projects__media {
   flex: 1 60rem; }
+
+#contact {
+  background-image: linear-gradient(135deg, #8ca6db 0%, #606c88 100%);
+  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
+  padding: 15rem 0 10rem 0; }
+  @media only screen and (max-width: 75em) {
+    #contact {
+      padding: 10rem 0;
+      clip-path: none;
+      margin-top: 0;
+      -webkit-clip-path: none; } }
+
+.contact__form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 4rem;
+  margin-top: 6rem;
+  max-width: 80rem;
+  text-align: left;
+  border-radius: 5px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 37.5em) {
+    .contact__form {
+      padding: 2rem; } }
+  .contact__form-field {
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__form-field {
+        margin-bottom: 2rem; } }
+  .contact__form-label {
+    color: #666;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block; }
+  .contact__form-input {
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 1.6rem;
+    background: #f0f0f0;
+    border-radius: 5px; }
+    .contact__form-input::placeholder {
+      color: #999; }
