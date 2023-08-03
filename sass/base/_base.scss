@@ -29,7 +29,8 @@ section {
   padding: $section-padding 0;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: auto;
   object-fit: cover;
