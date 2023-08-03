@@ -408,11 +408,10 @@ textarea {
 .footer__to-top {
   display: inline-block;
   padding: 4rem;
-  font-size: 2rem; }
-  .footer__to-top i {
-    transition: all 0.2s ease-in; }
-    .footer__to-top i:hover {
-      transform: translateY(-2px); }
+  font-size: 2rem;
+  transition: all 0.2s ease-in; }
+  .footer__to-top:hover {
+    transform: translateY(-2px); }
 
 .footer__list {
   font-size: 1.4rem; }
