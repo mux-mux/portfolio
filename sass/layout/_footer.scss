@@ -1,4 +1,4 @@
-#footer {
+.footer {
   background: #555;
   color: $white-color;
 
@@ -7,9 +7,7 @@
       background: radial-gradient(circle, rgba(102, 102, 102, 1) 0%, rgba(85, 85, 85, 1) 40%);
     }
   }
-}
 
-.footer {
   &__divider {
     padding: 1.5rem 0;
   }

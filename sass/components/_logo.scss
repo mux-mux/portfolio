@@ -17,6 +17,11 @@
 
   &-hero {
     flex-shrink: 0;
-    margin-left: 5rem;
+    width: 11rem;
+
+    @include respond(laptop) {
+      margin: 0 auto;
+      order: -1;
+    }
   }
 }

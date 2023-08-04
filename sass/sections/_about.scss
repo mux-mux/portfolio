@@ -1,4 +1,4 @@
-#about {
+.about {
   background-color: $primary-color;
   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   color: $white-color;
@@ -9,18 +9,13 @@
   padding-bottom: 10%;
 
   @include respond(laptop) {
+    padding: $section-padding 0;
     height: 100%;
     -webkit-clip-path: none;
     clip-path: none;
   }
-}
 
-.about {
   &__content {
-    @include respond(mobile) {
-      padding-bottom: 5rem;
-    }
-
     &-skills {
       display: inline-block;
       text-align: left;
