@@ -15,10 +15,10 @@
     } //1200px
   }
   //1200-1800 overall styles
-  @if $breakpoint == UHD {
-    @media only screen and (min-width: 112.5em) {
+  @if $breakpoint == 4K {
+    @media only screen and (min-width: 180em) {
       @content;
-    } //1800
+    } //2880
   }
 }
 
