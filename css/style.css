@@ -74,6 +74,9 @@ textarea {
       color: transparent; } }
   .text-gradient-main:hover {
     transform: translateX(2px); }
+    @media only screen and (max-width: 37.5em) {
+      .text-gradient-main:hover:hover {
+        transform: translateX(0); } }
 
 .heading-primary {
   font-size: 4rem;
@@ -225,6 +228,9 @@ textarea {
     transition: all 0.2s ease-in; }
     .social__item:hover {
       transform: translateY(-2px); }
+    @media only screen and (max-width: 37.5em) {
+      .social__item:hover {
+        transform: translateY(0); } }
   .social__link {
     font-size: 3rem;
     line-height: 3rem; }
@@ -267,6 +273,9 @@ textarea {
         margin-right: 2px; }
       .header__logo-subtext:hover {
         color: #8ca6db; }
+      @media only screen and (max-width: 37.5em) {
+        .header__logo-subtext:hover {
+          color: inherit; } }
   .header__menu-list {
     display: flex; }
     @media only screen and (max-width: 37.5em) {
@@ -282,6 +291,9 @@ textarea {
     transition: color 0.3s; }
     .header__menu-link:hover {
       color: #8ca6db; }
+    @media only screen and (max-width: 37.5em) {
+      .header__menu-link:hover {
+        color: inherit; } }
     @media only screen and (max-width: 56.25em) {
       .header__menu-link {
         padding: 3rem 1.8rem;
@@ -327,6 +339,9 @@ textarea {
       transition: color 0.3s; }
       .header__mobile-link:hover {
         color: #8ca6db; }
+      @media only screen and (max-width: 37.5em) {
+        .header__mobile-link:hover {
+          color: inherit; } }
       .header__mobile-link:first-of-type {
         border-top: 1px solid #eee; }
       .header__mobile-link:last-of-type {
@@ -450,6 +465,9 @@ textarea {
     background: radial-gradient(circle, #666666 0%, #555555 40%); }
   .footer__divider {
     padding: 1.5rem 0; }
+  .footer-educational {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
   .footer__to-top {
     display: inline-block;
     padding: 4rem;
@@ -457,7 +475,26 @@ textarea {
     transition: all 0.2s ease-in; }
     .footer__to-top:hover {
       transform: translateY(-2px); }
+    @media only screen and (max-width: 37.5em) {
+      .footer__to-top:hover {
+        transform: translateY(0); } }
   .footer__list {
-    font-size: 1.4rem; }
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    padding-left: 5rem;
+    text-align: left; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__list {
+        text-align: center;
+        padding-left: 0; } }
+  .footer__link {
+    font-size: 1.4rem;
+    text-decoration: underline; }
+    .footer__link:hover {
+      text-decoration: none; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__link:hover {
+          text-decoration: underline; } }
   .footer-copy {
     font-size: 1.2rem; }

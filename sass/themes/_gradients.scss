@@ -9,5 +9,11 @@
 
   &:hover {
     transform: translateX(2px);
+
+    @include respond(mobile) {
+      &:hover {
+        transform: translateX(0);
+      }
+    }
   }
 }

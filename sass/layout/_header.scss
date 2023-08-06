@@ -38,6 +38,12 @@
       &:hover {
         color: $primary-color;
       }
+
+      @include respond(mobile) {
+        &:hover {
+          color: inherit;
+        }
+      }
     }
   }
 
@@ -61,6 +67,13 @@
       &:hover {
         color: $primary-color;
       }
+
+      @include respond(mobile) {
+        &:hover {
+          color: inherit;
+        }
+      }
+
       @include respond(tablet) {
         padding: 3rem 1.8rem;
         font-size: 1.5rem;
@@ -122,6 +135,12 @@
 
       &:hover {
         color: $primary-color;
+      }
+
+      @include respond(mobile) {
+        &:hover {
+          color: inherit;
+        }
       }
 
       &:first-of-type {

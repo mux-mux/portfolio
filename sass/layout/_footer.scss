@@ -11,16 +11,48 @@
   &__divider {
     padding: 1.5rem 0;
   }
+  &-educational {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
   &__to-top {
     display: inline-block;
     padding: 4rem;
     font-size: 2rem;
 
     @include hoverRise;
+
+    @include respond(mobile) {
+      &:hover {
+        transform: translateY(0);
+      }
+    }
   }
 
   &__list {
+    display: inline-block;
+    margin: 1rem 0;
     font-size: 1.4rem;
+    padding-left: 5rem;
+    text-align: left;
+
+    @include respond(mobile) {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+
+      @include respond(mobile) {
+        text-decoration: underline;
+      }
+    }
   }
 
   &-copy {
