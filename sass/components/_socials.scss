@@ -5,6 +5,12 @@
 
   &__item {
     @include hoverRise;
+
+    @include respond(mobile) {
+      &:hover {
+        transform: translateY(0);
+      }
+    }
   }
 
   &__link {
