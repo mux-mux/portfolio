@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="simple, nice, lightweight, mykhaylo`s portfolio" />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <script src="https://kit.fontawesome.com/98ed2c2c6d.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
@@ -20,7 +21,7 @@
     <header id="header" class="header">
       <div class="header__container">
         <div class="header__logo">
-          <a href="#home" class="logo-header">
+          <a href="#home" tabindex="-1" class="logo-header">
             <img
               src="./assets/main_photo.png"
               alt="mykhaylo`s photo small"
@@ -33,6 +34,7 @@
             href="./assets/resume.pdf"
             target="_blank"
             aria-label="pdf resume file"
+            tabindex="-1"
             class="header__logo-resume"
           >
             <span class="header__logo-name">Mykhaylo's Kobylyukh</span>
@@ -42,20 +44,22 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a href="#home" class="header__menu-link"
+              <a href="#home" class="header__menu-link" tabindex="-1"
                 ><i class="fa-regular fa-circle-up"></i>Home</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#about" class="header__menu-link"><i class="fa-regular fa-file"></i>About</a>
+              <a href="#about" tabindex="-1" class="header__menu-link"
+                ><i class="fa-regular fa-file"></i>About</a
+              >
             </li>
             <li class="header__menu-item">
-              <a href="#projects" class="header__menu-link"
+              <a href="#projects" tabindex="-1" class="header__menu-link"
                 ><i class="fa-solid fa-code"></i>Projects</a
               >
             </li>
             <li class="header__menu-item">
-              <a href="#contact" class="header__menu-link"
+              <a href="#contact" tabindex="-1" class="header__menu-link"
                 ><i class="fa-regular fa-paper-plane"></i>Contact</a
               >
             </li>
@@ -99,12 +103,17 @@
               <a
                 href="https://github.com/mux-mux"
                 aria-label="Mykhaylo's github"
+                tabindex="-1"
                 class="social__link"
                 ><i class="fa-brands fa-github"></i
               ></a>
             </li>
             <li class="social__item">
-              <a href="https://t.me/mikekoby" aria-label="Mykhaylo's telegram" class="social__link"
+              <a
+                href="https://t.me/mikekoby"
+                aria-label="Mykhaylo's telegram"
+                tabindex="-1"
+                class="social__link"
                 ><i class="fa-brands fa-telegram"></i
               ></a>
             </li>
@@ -112,6 +121,7 @@
               <a
                 href="viber://chat?number=%2B380677159565"
                 aria-label="Mykhaylo's viber"
+                tabindex="-1"
                 class="social__link"
                 ><i class="fa-brands fa-viber"></i
               ></a>
@@ -120,6 +130,7 @@
               <a
                 href="https://www.linkedin.com/in/mykhaylo-kobylyukh/"
                 aria-label="Mykhaylo's linkedin"
+                tabindex="-10"
                 class="social__link"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
@@ -128,6 +139,7 @@
               <a
                 href="mailto:kobylyukh@gmail.com"
                 aria-label="Mykhaylo's email"
+                tabindex="-1"
                 class="social__link"
                 ><i class="fa-solid fa-envelope"></i
               ></a>
@@ -140,7 +152,7 @@
                 <br />
                 I`m a Web Developer you are looking for
               </h1>
-              <a href="#projects" class="cta-btn main-btn">See My Projects</a>
+              <a href="#projects" class="cta-btn main-btn" tabindex="2">See My Projects</a>
             </div>
             <div class="logo-hero">
               <img
@@ -220,7 +232,7 @@
               >
             </div>
             <div class="projects__media">
-              <video controls>
+              <video controls muted>
                 <source src="./assets/coffeehouse-video.mp4" type="video/mp4" />
               </video>
             </div>
@@ -277,7 +289,9 @@
     </main>
     <footer id="footer" class="footer">
       <div class="container">
-        <a href="#home" class="footer__to-top"><i class="fa-solid fa-angles-up"></i></a>
+        <a href="#home" aria-label="Scroll to the top" class="footer__to-top"
+          ><i class="fa-solid fa-angles-up"></i
+        ></a>
 
         <ul class="social social-footer">
           <li class="social__item">
@@ -314,7 +328,7 @@
         </ul>
 
         <div class="footer__divider">
-          <h4 class="heading-quaternary mb-10">Educational Projects</h4>
+          <h3 class="heading-quaternary mb-10">Educational Projects</h3>
           <div class="footer-educational">
             <ul class="footer__list">
               <li class="footer__list-item">
@@ -404,6 +418,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://kit.fontawesome.com/98ed2c2c6d.js" crossorigin="anonymous" async></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

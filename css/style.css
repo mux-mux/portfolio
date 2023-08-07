@@ -22,7 +22,8 @@
   font-family: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  font-display: optional; }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth; } }
@@ -33,7 +34,7 @@ html {
 body {
   box-sizing: border-box;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', 'Franklin Gothic', sans-serif;
   color: #333; }
 
 .container {
