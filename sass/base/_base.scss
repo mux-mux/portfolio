@@ -9,7 +9,11 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+
   @include respond(4K) {
     font-size: 100%;
   }
