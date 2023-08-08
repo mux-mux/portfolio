@@ -1,3 +1,4 @@
+//Mobile navigation
 const hamburger = document.querySelector('.header__hamburger'),
   openHamburger = hamburger.querySelector('.header__hamburger-open'),
   closeHamburger = hamburger.querySelector('.header__hamburger-close'),

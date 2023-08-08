@@ -327,6 +327,8 @@ textarea {
         .header__mobile-active {
           visibility: visible;
           opacity: 1; } }
+    .header__mobile-item button {
+      width: 100%; }
     .header__mobile-link {
       background-color: #fff;
       display: block;
@@ -342,6 +344,8 @@ textarea {
       transition: color 0.3s; }
       .header__mobile-link:hover {
         color: #8ca6db; }
+      .header__mobile-link i {
+        margin-right: 5px; }
       @media only screen and (max-width: 37.5em) {
         .header__mobile-link:hover {
           color: inherit; } }

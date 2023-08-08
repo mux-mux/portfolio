@@ -119,6 +119,12 @@
       }
     }
 
+    &-item {
+      button {
+        width: 100%;
+      }
+    }
+
     &-link {
       background-color: #fff;
       display: block;
@@ -135,6 +141,10 @@
 
       &:hover {
         color: $primary-color;
+      }
+
+      i {
+        margin-right: 5px;
       }
 
       @include respond(mobile) {
