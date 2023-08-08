@@ -28,11 +28,21 @@ mobileMenuLinks.forEach((item) => {
 });
 
 //Theme switcher
-const themeSwither = document.querySelector('.theme__switch-slider');
+const themeSwither = document.querySelectorAll('.theme__switch-slider'),
+  themeChecker = document.querySelectorAll('.theme__switch-toggle');
 
 const setTheme = (themeName) => {
   localStorage.setItem('theme', themeName);
   document.documentElement.className = themeName;
+  if (themeName == 'theme-dark') {
+    themeChecker.forEach((el) => {
+      el.setAttribute('checked', 'checked');
+    });
+  } else {
+    themeChecker.forEach((el) => {
+      el.removeAttribute('checked');
+    });
+  }
 };
 
 const toggleTheme = () => {
@@ -51,6 +61,8 @@ const toggleTheme = () => {
   }
 })();
 
-['click', 'touchmove'].forEach((ev) => {
-  themeSwither.addEventListener(ev, toggleTheme);
+[('click', 'touchend')].forEach((ev) => {
+  themeSwither.forEach((el) => {
+    el.addEventListener(ev, toggleTheme);
+  });
 });
