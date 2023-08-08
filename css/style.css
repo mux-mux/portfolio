@@ -81,6 +81,71 @@ textarea {
       .text-gradient-main:hover:hover {
         transform: translateX(0); } }
 
+.theme-light {
+  --bg_gray_main: rgba(0, 0, 0, 0.1);
+  --color_main: #666;
+  --bg_main: #fff; }
+
+.theme-dark {
+  --bg_gray_main: rgba(0, 0, 0, 0.4);
+  --color_main: #fff;
+  --bg_main: #333; }
+
+.theme-dark .theme__switch-slider:before {
+  transform: translateX(19px); }
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.6rem;
+  color: #333;
+  margin-left: 2rem;
+  background: var(--bg_main); }
+  @media only screen and (max-width: 56.25em) {
+    .theme {
+      margin: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .theme {
+      padding: 2.5rem 3rem; } }
+  .theme__switch {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 25px;
+    margin: 0 5px; }
+    .theme__switch-toggle {
+      opacity: 0;
+      width: 0;
+      height: 0; }
+    .theme__switch-slider {
+      border-radius: 25px;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--bg_gray_main);
+      transition: 0.4s; }
+      .theme__switch-slider:before {
+        content: '';
+        border-radius: 50%;
+        color: var(--color_main);
+        background-color: var(--bg_main);
+        font-family: penciicon;
+        position: absolute;
+        content: '';
+        height: 19px;
+        line-height: 20px;
+        width: 19px;
+        text-align: center;
+        left: 3px;
+        bottom: 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+        font-size: 14px !important;
+        transition: all 0.25s ease 0s; }
+
 .heading-primary {
   font-size: 4rem;
   font-weight: 700; }
@@ -126,7 +191,8 @@ textarea {
     width: 5rem;
     height: 5rem;
     overflow: hidden;
-    margin-right: 1.5rem; }
+    margin-right: 1.5rem;
+    flex-shrink: 0; }
     @media only screen and (max-width: 56.25em) {
       .logo-header {
         width: 4.5rem;
@@ -250,7 +316,7 @@ textarea {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: #fff;
+  background: var(--bg_main);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); }
   .header__container {
     display: flex;
@@ -351,8 +417,6 @@ textarea {
           color: inherit; } }
       .header__mobile-link:first-of-type {
         border-top: 1px solid #eee; }
-      .header__mobile-link:last-of-type {
-        border-bottom: 0; }
 
 .hero {
   position: relative;
