@@ -1,0 +1,61 @@
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.6rem;
+  color: #333;
+  margin-left: 2rem;
+  background: var(--bg_main);
+
+  @include respond(tablet) {
+    margin: 0;
+  }
+  @include respond(mobile) {
+    padding: 2.5rem 3rem;
+  }
+
+  &__switch {
+    position: relative;
+    display: block;
+    width: 45px;
+    height: 25px;
+    margin: 0 5px;
+
+    &-toggle {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    &-slider {
+      border-radius: 25px;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--bg_gray_main);
+      transition: 0.4s;
+
+      &:before {
+        content: '';
+        border-radius: 50%;
+        color: var(--color_main);
+        background-color: var(--bg_main);
+        font-family: penciicon;
+        position: absolute;
+        content: '';
+        height: 19px;
+        line-height: 20px;
+        width: 19px;
+        text-align: center;
+        left: 3px;
+        bottom: 3px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px;
+        font-size: 14px !important;
+        transition: all 0.25s ease 0s;
+      }
+    }
+  }
+}

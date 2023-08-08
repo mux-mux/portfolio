@@ -1,0 +1,17 @@
+.theme-dark {
+  --bg_gray_main: rgba(0, 0, 0, 0.4);
+  --color_main: #fff;
+  --bg_main: #333;
+}
+
+.theme-dark {
+  .theme {
+    &__switch {
+      &-slider {
+        &:before {
+          transform: translateX(19px);
+        }
+      }
+    }
+  }
+}

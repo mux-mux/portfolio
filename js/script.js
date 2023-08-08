@@ -1,3 +1,4 @@
+//Mobile navigation
 const hamburger = document.querySelector('.header__hamburger'),
   openHamburger = hamburger.querySelector('.header__hamburger-open'),
   closeHamburger = hamburger.querySelector('.header__hamburger-close'),
@@ -24,4 +25,32 @@ mobileMenuLinks.forEach((item) => {
   item.addEventListener('click', () => {
     toggleMenu();
   });
+});
+
+//Theme switcher
+const themeSwither = document.querySelector('.theme__switch-slider');
+
+const setTheme = (themeName) => {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+};
+
+const toggleTheme = () => {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+    setTheme('theme-light');
+  } else {
+    setTheme('theme-dark');
+  }
+};
+
+(function () {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+    setTheme('theme-dark');
+  } else {
+    setTheme('theme-light');
+  }
+})();
+
+['click', 'touchmove'].forEach((ev) => {
+  themeSwither.addEventListener(ev, toggleTheme);
 });
