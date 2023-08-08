@@ -393,8 +393,6 @@ textarea {
         .header__mobile-active {
           visibility: visible;
           opacity: 1; } }
-    .header__mobile-item button {
-      width: 100%; }
     .header__mobile-link {
       background-color: #fff;
       display: block;
