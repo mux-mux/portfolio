@@ -3,9 +3,8 @@
   align-items: center;
   justify-content: flex-end;
   font-size: 1.6rem;
-  color: #333;
+  color: var(--text_color);
   margin-left: 2rem;
-  background: var(--bg_main);
 
   @include respond(tablet) {
     margin: 0;
@@ -35,14 +34,13 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: var(--bg_gray_main);
+      background-color: rgba(0, 0, 0, 0.1);
       transition: 0.4s;
 
       &:before {
         content: '';
         border-radius: 50%;
-        color: var(--color_main);
-        background-color: var(--bg_main);
+        background-color: $white-color;
         font-family: penciicon;
         position: absolute;
         content: '';

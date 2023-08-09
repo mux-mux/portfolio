@@ -1,10 +1,9 @@
 .text-gradient-main {
   @include supportColorForIE11();
 
-  // Responsive text purple style
   @include respond(phone) {
     background-image: none;
-    -webkit-text-fill-color: $secondary-color;
+    -webkit-text-fill-color: var(--second-gradient);
   }
 
   &:hover {

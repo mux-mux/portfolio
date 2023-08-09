@@ -1,5 +1,8 @@
 .theme-light {
-  --bg_gray_main: rgba(0, 0, 0, 0.1);
-  --color_main: #666;
-  --bg_main: #fff;
+  --bg_color: #fff;
+  --text_color: #333;
+  --primary-color: #8ca6db;
+  --first-gradient: var(--primary-color);
+  --second-gradient: #606c88;
+  --second-gradient-bg: #606c88;
 }

@@ -25,13 +25,21 @@
   @include supportColorForIE11();
   border-width: 2px;
   border-style: solid;
-  -moz-border-image: -moz-linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-  -webkit-border-image: -webkit-linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
-  border-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  -moz-border-image: -moz-linear-gradient(
+    135deg,
+    var(--second-gradient) 0%,
+    var(--first-gradient) 100%
+  );
+  -webkit-border-image: -webkit-linear-gradient(
+    135deg,
+    var(--first-gradient) 0%,
+    var(--second-gradient) 100%
+  );
+  border-image: linear-gradient(135deg, var(--second-gradient) 0%, var(--first-gradient) 100%);
   -webkit-border-image-slice: 1;
   border-image-slice: 1;
   @include supportIE11() {
-    color: $secondary-color !important;
+    color: var(--second-gradient) !important;
     &:hover {
       color: $white-color !important;
     }
@@ -39,12 +47,16 @@
 
   @include respond(mobile) {
     background-image: none;
-    border: 2px solid $secondary-color;
-    -webkit-text-fill-color: $secondary-color;
+    border: 2px solid var(--second-gradient);
+    -webkit-text-fill-color: var(--second-gradient);
   }
 
   &::after {
-    background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    background-image: linear-gradient(
+      135deg,
+      var(--second-gradient) 0%,
+      var(--first-gradient) 100%
+    );
 
     @include respond(mobile) {
       background-image: none;
@@ -56,7 +68,7 @@
     text-decoration: none;
 
     @include respond(mobile) {
-      -webkit-text-fill-color: $secondary-color;
+      -webkit-text-fill-color: var(--second-gradient);
     }
 
     &::after {
@@ -66,14 +78,14 @@
 }
 
 .white-btn {
-  border: 2px solid $white-color;
+  border: 2px solid #eee;
 
   @include respond(mobile) {
     background-image: none;
   }
 
   &::after {
-    background: $white-color;
+    background: #eee;
 
     @include respond(mobile) {
       background: none;
@@ -81,11 +93,11 @@
   }
 
   &:hover {
-    -webkit-text-fill-color: $secondary-color;
+    -webkit-text-fill-color: var(--second-gradient);
     text-decoration: none;
 
     @include respond(mobile) {
-      -webkit-text-fill-color: $white-color;
+      -webkit-text-fill-color: #eee;
     }
 
     &::after {
