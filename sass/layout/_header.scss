@@ -120,8 +120,9 @@
     }
 
     &-item {
+      background-color: var(--bg_color);
       &:first-child a {
-        border-top: 1px solid #eee;
+        border-top: 1px solid var(--mobile-border);
       }
     }
 
@@ -133,7 +134,7 @@
       font-size: 1.6rem;
       color: var(--text_color);
       text-align: right;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--mobile-border);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
