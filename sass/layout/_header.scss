@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: var(--bg_main);
+  background-color: var(--bg_color);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 
   &__container {
@@ -36,7 +36,7 @@
       }
 
       &:hover {
-        color: $primary-color;
+        color: var(--primary-color);
       }
 
       @include respond(mobile) {
@@ -65,7 +65,7 @@
       transition: color 0.3s;
 
       &:hover {
-        color: $primary-color;
+        color: var(--primary-color);
       }
 
       @include respond(mobile) {
@@ -119,13 +119,19 @@
       }
     }
 
+    &-item {
+      &:first-child a {
+        border-top: 1px solid #eee;
+      }
+    }
+
     &-link {
-      background-color: #fff;
+      background-color: var(--bg_color);
       display: block;
       text-decoration: none;
       padding: 2.5rem 3rem;
       font-size: 1.6rem;
-      color: #333;
+      color: var(--text_color);
       text-align: right;
       border-bottom: 1px solid #eee;
       font-weight: 700;
@@ -134,7 +140,7 @@
       transition: color 0.3s;
 
       &:hover {
-        color: $primary-color;
+        color: var(--primary-color);
       }
 
       i {
@@ -145,10 +151,6 @@
         &:hover {
           color: inherit;
         }
-      }
-
-      &:first-of-type {
-        border-top: 1px solid #eee;
       }
     }
   }

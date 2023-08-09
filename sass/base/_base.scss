@@ -23,7 +23,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   font-family: 'Oswald', 'Franklin Gothic', sans-serif;
-  color: $main-color;
+  color: var(--text_color);
 }
 
 .container {

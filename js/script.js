@@ -61,7 +61,7 @@ const toggleTheme = () => {
   }
 })();
 
-[('click', 'touchend')].forEach((ev) => {
+['click', 'touchend'].forEach((ev) => {
   themeSwither.forEach((el) => {
     el.addEventListener(ev, toggleTheme);
   });
