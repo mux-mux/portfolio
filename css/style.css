@@ -84,6 +84,7 @@ textarea {
 .theme-light {
   --bg_color: #fff;
   --text_color: #333;
+  --mobile-border: #eee;
   --primary-color: #8ca6db;
   --first-gradient: var(--primary-color);
   --second-gradient: #606c88;
@@ -92,6 +93,7 @@ textarea {
 .theme-dark {
   --bg_color: #444;
   --text_color: #eee;
+  --mobile-border: #666;
   --primary-color: #8ca6db;
   --first-gradient: #6b7fa7;
   --second-gradient: #6d81a9;
@@ -397,8 +399,10 @@ textarea {
         .header__mobile-active {
           visibility: visible;
           opacity: 1; } }
-    .header__mobile-item:first-child a {
-      border-top: 1px solid #eee; }
+    .header__mobile-item {
+      background-color: var(--bg_color); }
+      .header__mobile-item:first-child a {
+        border-top: 1px solid var(--mobile-border); }
     .header__mobile-link {
       background-color: var(--bg_color);
       display: block;
@@ -407,7 +411,7 @@ textarea {
       font-size: 1.6rem;
       color: var(--text_color);
       text-align: right;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid var(--mobile-border);
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
