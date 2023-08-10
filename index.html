@@ -266,7 +266,14 @@
       <section id="contact" class="contact">
         <div class="container">
           <h2 class="section__title title-white">Contact</h2>
-          <form action="#" class="contact__form" method="post">
+          <form
+            class="contact__form"
+            enctype="multipart/form-data"
+            method="post"
+            id="form"
+            onsubmit="submitForm(event)"
+            action="mailer/send.php"
+          >
             <div class="contact__form-field">
               <label for="name" class="contact__form-label">Name</label>
               <input
