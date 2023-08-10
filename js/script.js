@@ -1,3 +1,6 @@
+'use strict';
+'use esversion: 8'; //server rule
+
 //Mobile navigation
 const hamburger = document.querySelector('.header__hamburger'),
   openHamburger = hamburger.querySelector('.header__hamburger-open'),
@@ -66,3 +69,34 @@ const toggleTheme = () => {
     el.addEventListener(ev, toggleTheme);
   });
 });
+
+//Form submitter
+async function submitForm(event) {
+  event.preventDefault();
+  try {
+    const response = await fetch(event.target.action, {
+      method: 'POST',
+      body: new FormData(event.target),
+    });
+
+    if (!response.ok) throw `Server Error: ${response.status}`;
+
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw 'Type error: not JSON';
+    }
+
+    const json = await response.json();
+    if (json.result === 'success') {
+      alert(json.info);
+      document
+        .querySelectorAll('#form input, #form textarea')
+        .forEach((inputField) => (inputField.value = ''));
+    } else {
+      console.log(json);
+      throw json.info;
+    }
+  } catch (error) {
+    alert(error);
+  }
+}
