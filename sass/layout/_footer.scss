@@ -37,8 +37,7 @@
     text-align: left;
 
     @include respond(mobile) {
-      text-align: center;
-      padding-left: 0;
+      padding-left: 35%;
     }
   }
 

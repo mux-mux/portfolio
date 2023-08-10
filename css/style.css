@@ -567,8 +567,7 @@ textarea {
     text-align: left; }
     @media only screen and (max-width: 37.5em) {
       .footer__list {
-        text-align: center;
-        padding-left: 0; } }
+        padding-left: 35%; } }
   .footer__link {
     font-size: 1.4rem;
     text-decoration: underline; }
