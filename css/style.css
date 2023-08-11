@@ -114,7 +114,7 @@ textarea {
       margin: 0; } }
   @media only screen and (max-width: 37.5em) {
     .theme {
-      padding: 2.5rem 3rem; } }
+      padding: 2.2rem 3rem; } }
   .theme__switch {
     position: relative;
     display: block;
@@ -353,9 +353,6 @@ textarea {
           color: inherit; } }
   .header__menu-list {
     display: flex; }
-    @media only screen and (max-width: 37.5em) {
-      .header__menu-list {
-        display: none; } }
   .header__menu-link {
     padding: 2.2rem 3rem;
     display: inline-block;
@@ -366,13 +363,9 @@ textarea {
     transition: color 0.3s; }
     .header__menu-link:hover {
       color: var(--primary-color); }
-    @media only screen and (max-width: 37.5em) {
-      .header__menu-link:hover {
-        color: inherit; } }
     @media only screen and (max-width: 56.25em) {
       .header__menu-link {
-        padding: 3rem 1.8rem;
-        font-size: 1.5rem; } }
+        padding: 3rem 1.6rem; } }
     .header__menu-link i {
       margin-right: 4px; }
   .header__hamburger {
@@ -383,46 +376,38 @@ textarea {
         display: block; } }
     .header__hamburger-open, .header__hamburger-close {
       padding: 3rem 2.2rem; }
-  .header__mobile {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1); }
-    .header__mobile-active {
+  @media only screen and (max-width: 37.5em) {
+    .header__menu {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      right: 0;
       visibility: hidden;
-      opacity: 0; }
-      @media only screen and (max-width: 37.5em) {
-        .header__mobile-active {
-          visibility: visible;
-          opacity: 1; } }
-    .header__mobile-item {
-      background-color: var(--bg_color); }
-      .header__mobile-item:first-child a {
-        border-top: 1px solid var(--mobile-border); }
-    .header__mobile-link {
-      background-color: var(--bg_color);
-      display: block;
-      text-decoration: none;
-      padding: 2.5rem 3rem;
-      font-size: 1.6rem;
-      color: var(--text_color);
-      text-align: right;
-      border-bottom: 1px solid var(--mobile-border);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: color 0.3s; }
-      .header__mobile-link:hover {
-        color: var(--primary-color); }
-      .header__mobile-link i {
-        margin-right: 5px; }
-      @media only screen and (max-width: 37.5em) {
-        .header__mobile-link:hover {
-          color: inherit; } }
+      opacity: 0;
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1); }
+      .header__menu-list {
+        flex-direction: column; }
+      .header__menu-active {
+        transition: all 0.3s;
+        visibility: visible;
+        opacity: 1; }
+      .header__menu-item {
+        background-color: var(--bg_color); }
+        .header__menu-item:first-child a {
+          border-top: 1px solid var(--mobile-border); }
+      .header__menu-link {
+        background-color: var(--bg_color);
+        display: block;
+        padding: 2.2rem 3rem;
+        font-size: 2rem;
+        color: var(--text_color);
+        text-align: right;
+        border-bottom: 1px solid var(--mobile-border);
+        transition: color 0.3s; }
+        .header__menu-link:hover {
+          color: inherit; }
+        .header__menu-link i {
+          margin-right: 5px; } }
 
 .main {
   background-color: var(--bg_color); }
@@ -518,9 +503,6 @@ textarea {
         padding: 2rem; } }
     .contact__form-field {
       margin-bottom: 2rem; }
-      @media only screen and (max-width: 37.5em) {
-        .contact__form-field {
-          margin-bottom: 2rem; } }
     .contact__form-label {
       color: var(--text_color);
       filter: contrast(50%);
@@ -569,8 +551,7 @@ textarea {
       .footer__list {
         padding-left: 35%; } }
   .footer__link {
-    font-size: 1.4rem;
-    text-decoration: underline; }
+    font-size: 1.4rem; }
     .footer__link:hover {
       text-decoration: none; }
       @media only screen and (max-width: 37.5em) {

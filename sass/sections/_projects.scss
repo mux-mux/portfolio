@@ -14,12 +14,12 @@
 
     &-stages {
       display: inline-block;
-      font-size: 2rem;
+      font-size: $lg-font-size;
       font-weight: 700;
     }
 
     &-stage {
-      font-size: $list-font-size;
+      font-size: $xsm-font-size;
 
       &:last-of-type {
         margin-bottom: $list-margin;
