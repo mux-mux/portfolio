@@ -20,18 +20,18 @@
     align-items: center;
 
     &-name {
-      font-size: 1.4rem;
+      font-size: $xsm-font-size;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 1px;
     }
 
     &-subtext {
-      font-size: 1.4rem;
+      font-size: $xsm-font-size;
       transition: color 0.3s;
 
       i {
-        font-size: 1.6rem;
+        font-size: $sm-font-size;
         margin-right: 2px;
       }
 
@@ -50,15 +50,12 @@
   &__menu {
     &-list {
       display: flex;
-      @include respond(mobile) {
-        display: none;
-      }
     }
 
     &-link {
-      padding: 2.2rem 3rem;
+      padding: $header-link-padding;
       display: inline-block;
-      font-size: 1.6rem;
+      font-size: $sm-font-size;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 700;
@@ -68,15 +65,8 @@
         color: var(--primary-color);
       }
 
-      @include respond(mobile) {
-        &:hover {
-          color: inherit;
-        }
-      }
-
       @include respond(tablet) {
-        padding: 3rem 1.8rem;
-        font-size: 1.5rem;
+        padding: 3rem 1.6rem;
       }
 
       i {
@@ -87,7 +77,7 @@
 
   &__hamburger {
     display: none;
-    font-size: 2.6rem;
+    font-size: $xl-font-size;
 
     @include respond(mobile) {
       display: block;
@@ -99,58 +89,49 @@
     }
   }
 
-  &__mobile {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
-
-    &-active {
+  @include respond(mobile) {
+    &__menu {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      right: 0;
       visibility: hidden;
       opacity: 0;
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 
-      @include respond(mobile) {
+      &-list {
+        flex-direction: column;
+      }
+
+      &-active {
+        transition: all 0.3s;
         visibility: visible;
         opacity: 1;
       }
-    }
 
-    &-item {
-      background-color: var(--bg_color);
-      &:first-child a {
-        border-top: 1px solid var(--mobile-border);
-      }
-    }
-
-    &-link {
-      background-color: var(--bg_color);
-      display: block;
-      text-decoration: none;
-      padding: 2.5rem 3rem;
-      font-size: 1.6rem;
-      color: var(--text_color);
-      text-align: right;
-      border-bottom: 1px solid var(--mobile-border);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      transition: color 0.3s;
-
-      &:hover {
-        color: var(--primary-color);
+      &-item {
+        background-color: var(--bg_color);
+        &:first-child a {
+          border-top: 1px solid var(--mobile-border);
+        }
       }
 
-      i {
-        margin-right: 5px;
-      }
+      &-link {
+        background-color: var(--bg_color);
+        display: block;
+        padding: $header-link-padding;
+        font-size: $lg-font-size;
+        color: var(--text_color);
+        text-align: right;
+        border-bottom: 1px solid var(--mobile-border);
+        transition: color 0.3s;
 
-      @include respond(mobile) {
         &:hover {
           color: inherit;
+        }
+
+        i {
+          margin-right: 5px;
         }
       }
     }

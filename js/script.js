@@ -5,47 +5,37 @@
 const hamburger = document.querySelector('.header__hamburger'),
   openHamburger = hamburger.querySelector('.header__hamburger-open'),
   closeHamburger = hamburger.querySelector('.header__hamburger-close'),
-  mobileMenu = document.querySelector('.header__mobile'),
-  mobileMenuLinks = mobileMenu.querySelectorAll('.header__mobile-link');
+  mobileMenu = document.querySelector('.header__menu'),
+  mobileMenuLink = mobileMenu.querySelector('.header__menu-link');
 
 const toggleMenu = (action) => {
   if (action == 'open') {
-    mobileMenu.classList.add('header__mobile-active');
+    mobileMenu.classList.add('header__menu-active');
     openHamburger.classList.add('d-none');
     closeHamburger.classList.remove('d-none');
   } else {
-    mobileMenu.classList.remove('header__mobile-active');
+    mobileMenu.classList.remove('header__menu-active');
     openHamburger.classList.remove('d-none');
     closeHamburger.classList.add('d-none');
   }
 };
 
 hamburger.addEventListener('click', () => {
-  mobileMenu.classList.contains('header__mobile-active') ? toggleMenu() : toggleMenu('open');
+  mobileMenu.classList.contains('header__menu-active') ? toggleMenu() : toggleMenu('open');
 });
 
-mobileMenuLinks.forEach((item) => {
-  item.addEventListener('click', () => {
-    toggleMenu();
-  });
-});
+mobileMenuLink.addEventListener('click', toggleMenu());
 
 //Theme switcher
-const themeSwither = document.querySelectorAll('.theme__switch-slider'),
-  themeChecker = document.querySelectorAll('.theme__switch-toggle');
+const themeSwither = document.querySelector('.theme__switch-slider'),
+  themeChecker = document.querySelector('.theme__switch-toggle');
 
 const setTheme = (themeName) => {
   localStorage.setItem('theme', themeName);
   document.documentElement.className = themeName;
-  if (themeName == 'theme-dark') {
-    themeChecker.forEach((el) => {
-      el.setAttribute('checked', 'checked');
-    });
-  } else {
-    themeChecker.forEach((el) => {
-      el.removeAttribute('checked');
-    });
-  }
+  themeName === 'theme-dark'
+    ? themeChecker.setAttribute('checked', 'checked')
+    : themeChecker.removeAttribute('checked');
 };
 
 const toggleTheme = () => {
@@ -65,9 +55,7 @@ const toggleTheme = () => {
 })();
 
 ['click', 'touchend'].forEach((ev) => {
-  themeSwither.forEach((el) => {
-    el.addEventListener(ev, toggleTheme);
-  });
+  themeSwither.addEventListener(ev, toggleTheme);
 });
 
 //Form submitter
