@@ -292,8 +292,10 @@ textarea {
       width: 100%; }
 
 .contact__btn {
-  left: 50%;
-  transform: translateX(-50%); }
+  display: flex;
+  justify-content: center; }
+  .contact__btn-submit {
+    transition: none; }
 
 .social {
   display: flex;
