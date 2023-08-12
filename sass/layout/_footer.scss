@@ -44,12 +44,11 @@
   &__link {
     font-size: $xsm-font-size;
 
-    &:hover {
-      text-decoration: none;
-
-      @include respond(mobile) {
-        text-decoration: underline;
-      }
+    &-live {
+      padding-right: 5px;
+    }
+    &-git {
+      padding-left: 5px;
     }
   }
 

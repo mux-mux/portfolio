@@ -552,10 +552,9 @@ textarea {
         padding-left: 35%; } }
   .footer__link {
     font-size: 1.4rem; }
-    .footer__link:hover {
-      text-decoration: none; }
-      @media only screen and (max-width: 37.5em) {
-        .footer__link:hover {
-          text-decoration: underline; } }
+    .footer__link-live {
+      padding-right: 5px; }
+    .footer__link-git {
+      padding-left: 5px; }
   .footer-copy {
     font-size: 1.2rem; }
