@@ -323,6 +323,7 @@ textarea {
 .header {
   position: fixed;
   width: 100%;
+  min-height: 9rem;
   z-index: 1000;
   background-color: var(--bg_color);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); }
@@ -330,13 +331,14 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 5rem; }
+    padding: 0 5rem; }
     @media only screen and (max-width: 56.25em) {
       .header__container {
         padding: 0 2rem; } }
   .header__logo {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding: 2rem 0; }
     .header__logo-name {
       font-size: 1.4rem;
       text-transform: uppercase;
