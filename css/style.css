@@ -22,8 +22,7 @@
   font-family: inherit; }
 
 html {
-  font-size: 62.5%;
-  font-display: optional; }
+  font-size: 62.5%; }
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth; } }
@@ -314,9 +313,8 @@ textarea {
   .social-hero {
     flex-direction: column;
     position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%); }
+    left: 10px;
+    top: 40%; }
   .social-footer {
     padding: 1rem 0; }
 
@@ -421,6 +419,7 @@ textarea {
   height: 100vh;
   min-height: 80rem;
   max-height: 120rem;
+  padding: 0;
   background-color: var(--bg_color); }
   .hero__intro {
     position: absolute;
