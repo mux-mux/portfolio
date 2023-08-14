@@ -56,9 +56,7 @@ const toggleTheme = () => {
   }
 })();
 
-['click', 'touchend'].forEach((ev) => {
-  themeSwither.addEventListener(ev, toggleTheme);
-});
+themeSwither.addEventListener('click', toggleTheme);
 
 //Form submitter
 async function submitForm(event) {
