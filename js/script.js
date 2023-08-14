@@ -6,7 +6,7 @@ const hamburger = document.querySelector('.header__hamburger'),
   openHamburger = hamburger.querySelector('.header__hamburger-open'),
   closeHamburger = hamburger.querySelector('.header__hamburger-close'),
   mobileMenu = document.querySelector('.header__menu'),
-  mobileMenuLink = mobileMenu.querySelector('.header__menu-link');
+  mobileMenuLink = mobileMenu.querySelectorAll('.header__menu-link');
 
 const toggleMenu = (action) => {
   if (action == 'open') {
@@ -24,7 +24,9 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.contains('header__menu-active') ? toggleMenu() : toggleMenu('open');
 });
 
-mobileMenuLink.addEventListener('click', toggleMenu());
+mobileMenuLink.forEach((link) => {
+  link.addEventListener('click', toggleMenu);
+});
 
 //Theme switcher
 const themeSwither = document.querySelector('.theme__switch-slider'),
