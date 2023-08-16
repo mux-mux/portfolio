@@ -1,20 +1,15 @@
-# Portfolio 🔥
+# Portfolio :fire:
 
-## A Fast and Simple Portfolio Website 🚀
+## A Fast and Simple Portfolio Website :rocket:
 
-## [Live Link](https://jsgo.pro) 🔗
+## [Live Link](https://jsgo.pro) :link:
+
+<br/>
 
 <div align="center">
-  <img src="https://jsgo.pro/media/portfolio.gif" alt="Portfolio Demo" width="100%" />
+  <img src="https://jsgo.pro/media/gif/portfolio.gif" alt="Portfolio Demo" width="100%" />
   <br>
 </div>
-
-<br/>
-<br/>
-
----
-
-<br/>
 
 ## Stages :scroll:
 
@@ -38,9 +33,9 @@
   <br>
 </div>
 
-## How To Use 🔧
+## How To Use :closed_lock_with_key:
 
-From your command line, first clone Dopefolio:
+From your command line, first clone Portfolio:
 
 ```bash
 # Clone this repository
