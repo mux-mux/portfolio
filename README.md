@@ -29,7 +29,7 @@
 ## Folder structure :open_file_folder:
 
 <div align="center">
-  <img src="https://jsgo.pro/media/structure/portfolio_folder_structure.jpg" alt="Portfolio Folder structure" width="100%" />
+  <img src="https://jsgo.pro/media/structure/portfolio_structure.jpg" alt="Portfolio Folder structure" width="100%" />
   <br>
 </div>
 
@@ -45,6 +45,6 @@ $ cd portfolio
 # Install dependencies
 $ npm install
 
-# Listen to changes in CSS Preprocessor files ( SASS files )
+# Open browser & listen to scss changes
 $ npm run dev
 ```
