@@ -1,6 +1,6 @@
 # Portfolio :fire:
 
-## A Fast and Simple Portfolio Website :rocket:
+## Fast and Simple Portfolio Website :rocket:
 
 ## [Live Link](https://jsgo.pro) :link:
 
@@ -35,8 +35,6 @@
 
 ## How To Use :closed_lock_with_key:
 
-From your command line, first clone Portfolio:
-
 ```bash
 # Clone this repository
 $ git clone git@github.com:mux-mux/portfolio.git
@@ -48,5 +46,5 @@ $ cd portfolio
 $ npm install
 
 # Listen to changes in CSS Preprocessor files ( SASS files )
-$ npm run compile:scss
+$ npm run dev
 ```
