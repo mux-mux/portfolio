@@ -29,7 +29,7 @@
 ## Folder structure :open_file_folder:
 
 <div align="center">
-  <img src="https://jsgo.pro/media/structure/portfolio_structure.jpg" alt="Portfolio Folder structure" width="100%" />
+  <img src="https://jsgo.pro/media/structure/portfolio_project_structure.png" alt="Portfolio Folder structure" width="100%" />
   <br>
 </div>
 
