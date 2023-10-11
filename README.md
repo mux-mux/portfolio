@@ -21,7 +21,7 @@
 6. projects section
 7. contact section
 8. footer
-9. responsible
+9. responsive
 10. accessible
 11. refactoring
 12. testing
