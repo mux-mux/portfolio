@@ -535,7 +535,9 @@ textarea {
     padding: 1.5rem 0; }
   .footer-educational {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+    grid-template-columns: repeat(auto-fit, 150px);
+    justify-content: center;
+    gap: 50px; }
   .footer__to-top {
     display: inline-block;
     padding: 4rem;
@@ -547,14 +549,8 @@ textarea {
       .footer__to-top:hover {
         transform: translateY(0); } }
   .footer__list {
-    display: inline-block;
-    margin: 1rem 0;
     font-size: 1.4rem;
-    padding-left: 5rem;
     text-align: left; }
-    @media only screen and (max-width: 56.25em) {
-      .footer__list {
-        padding-left: 35%; } }
   .footer__link {
     font-size: 1.4rem; }
     .footer__link-live {
