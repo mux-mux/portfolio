@@ -77,9 +77,7 @@ async function submitForm(event) {
     const json = await response.json();
     if (json.result === 'success') {
       alert(json.info);
-      document
-        .querySelectorAll('#form input, #form textarea')
-        .forEach((inputField) => (inputField.value = ''));
+      document.querySelectorAll('#form input, #form textarea').forEach((inputField) => (inputField.value = ''));
     } else {
       console.log(json);
       throw json.info;
@@ -88,3 +86,12 @@ async function submitForm(event) {
     alert(error);
   }
 }
+
+console.log(String.raw`
+ _     _   _    _______   _     _   ______   ______   ______    
+| |   | | | |  |__   __| | |   | | |  ____| |  __  | |  ____|   
+| |___| | | |     | |    | |___| | | |__    | |__| | | |__      
+|  ___  | | |     | |    |  ___  | |  __|   |  ____| |  __|     
+| |   | | | |     | |    | |   | | | |____  | | \ \  | |____    
+|_|   |_| |_|     |_|    |_|   |_| |______| |_|  \_\ |______|   
+                                                               `);
