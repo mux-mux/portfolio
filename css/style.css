@@ -13,6 +13,9 @@
 .bolder {
   font-weight: 900 !important; }
 
+.tc {
+  text-align: center; }
+
 *,
 *::after,
 *::before {
@@ -443,6 +446,11 @@ textarea {
     .about {
       padding: 10rem 0;
       height: 100%; } }
+  .about__list {
+    margin-left: 20px;
+    font-size: 1.4rem; }
+    .about__list > li {
+      list-style: initial; }
   .about__content {
     text-align: left; }
     .about__content-skills {
@@ -452,7 +460,7 @@ textarea {
       font-size: 1.4rem;
       margin: 2px 0; }
       .about__content-skill:last-of-type {
-        margin-bottom: 3rem; }
+        margin-bottom: 20px; }
       .about__content-skill i {
         width: 2.5rem;
         font-size: 2rem;
@@ -478,7 +486,7 @@ textarea {
     .projects__info-stage {
       font-size: 1.4rem; }
       .projects__info-stage:last-of-type {
-        margin-bottom: 3rem; }
+        margin-bottom: 20px; }
   .projects__media {
     flex: 1 60rem; }
 

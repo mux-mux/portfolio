@@ -10,6 +10,15 @@
     height: 100%;
   }
 
+  &__list {
+    margin-left: $list-margin;
+    font-size: $xsm-font-size;
+
+    & > li {
+      list-style: initial;
+    }
+  }
+
   &__content {
     text-align: left;
     &-skills {
