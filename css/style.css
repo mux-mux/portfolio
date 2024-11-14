@@ -555,10 +555,12 @@ textarea {
     font-size: 1.4rem;
     text-align: left; }
   .footer__link {
-    font-size: 1.4rem; }
-    .footer__link-live {
-      padding-right: 5px; }
-    .footer__link-git {
-      padding-left: 5px; }
+    display: inline-block;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    padding: 5px 0; }
+    @media (hover: hover) and (pointer: fine) {
+      .footer__link:hover {
+        text-decoration: none; } }
   .footer-copy {
     font-size: 1.2rem; }

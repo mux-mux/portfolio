@@ -4,7 +4,11 @@
 
   .container {
     & > :nth-child(2n) {
-      background: radial-gradient(circle, rgba(102, 102, 102, 1) 0%, rgba(85, 85, 85, 1) 40%);
+      background: radial-gradient(
+        circle,
+        rgba(102, 102, 102, 1) 0%,
+        rgba(85, 85, 85, 1) 40%
+      );
     }
   }
 
@@ -37,13 +41,15 @@
   }
 
   &__link {
+    display: inline-block;
     font-size: $xsm-font-size;
+    text-decoration: underline;
+    padding: 5px 0;
 
-    &-live {
-      padding-right: 5px;
-    }
-    &-git {
-      padding-left: 5px;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
