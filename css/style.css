@@ -175,7 +175,7 @@ textarea {
   color: #fff; }
 
 .title-dark {
-  color: --var(--text_color); }
+  color: var(--text_color); }
 
 .heading-tertiary {
   font-size: 2.8rem; }
