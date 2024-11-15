@@ -484,6 +484,9 @@ textarea {
     text-align: left;
     flex: 0 0 auto;
     margin: 0 auto; }
+    .projects__info-description {
+      display: block;
+      font-size: 1.4rem; }
     .projects__info-stages {
       display: inline-block;
       font-size: 2rem;

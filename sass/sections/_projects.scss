@@ -20,6 +20,11 @@
     flex: 0 0 auto;
     margin: 0 auto;
 
+    &-description {
+      display: block;
+      font-size: 1.4rem;
+    }
+
     &-stages {
       display: inline-block;
       font-size: $lg-font-size;
