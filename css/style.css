@@ -46,6 +46,9 @@ body {
 
 section {
   padding: 10rem 0; }
+  @media only screen and (max-width: 75em) {
+    section {
+      padding: 5rem 0; } }
 
 img,
 video {
@@ -440,11 +443,10 @@ textarea {
   background-image: linear-gradient(135deg, var(--first-gradient) 0%, var(--second-gradient-bg) 100%);
   color: #fff;
   height: 100%;
-  border-top: 0px;
-  padding-bottom: 10%; }
+  border-top: 0px; }
   @media only screen and (max-width: 75em) {
     .about {
-      padding: 10rem 0;
+      padding: 5rem 0;
       height: 100%; } }
   .about__list {
     margin-left: 20px;
@@ -473,6 +475,9 @@ textarea {
     flex-wrap: wrap;
     gap: 3rem;
     padding: 10rem 0; }
+    @media only screen and (max-width: 75em) {
+      .projects__wrapper {
+        padding: 5rem 0; } }
     .projects__wrapper:not(:last-of-type) {
       border-bottom: 1px solid #ccc; }
   .projects__info {
@@ -487,15 +492,16 @@ textarea {
       font-size: 1.4rem; }
       .projects__info-stage:last-of-type {
         margin-bottom: 20px; }
+  .projects-title {
+    margin-bottom: 0; }
   .projects__media {
     flex: 1 60rem; }
 
 .contact {
-  background-image: linear-gradient(135deg, var(--first-gradient) 0%, var(--second-gradient-bg) 100%);
-  padding: 15rem 0 10rem 0; }
+  background-image: linear-gradient(135deg, var(--first-gradient) 0%, var(--second-gradient-bg) 100%); }
   @media only screen and (max-width: 75em) {
     .contact {
-      padding: 10rem 0;
+      padding: 5rem 0;
       margin-top: 0; } }
   .contact__form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -505,10 +511,11 @@ textarea {
     max-width: 80rem;
     text-align: left;
     border-radius: 5px;
-    margin: 0 auto; }
+    margin: 0 auto 10rem; }
     @media only screen and (max-width: 37.5em) {
       .contact__form {
-        padding: 2rem; } }
+        padding: 2rem;
+        margin: 0 auto 5rem; } }
     .contact__form-field {
       margin-bottom: 2rem; }
     .contact__form-label {

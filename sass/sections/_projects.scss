@@ -4,7 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    padding: 10rem 0;
+    padding: $section-padding 0;
+
+    @include respond(laptop) {
+      padding: $section-padding-laptop 0;
+    }
 
     &:not(:last-of-type) {
       border-bottom: 1px solid #ccc;
@@ -29,6 +33,10 @@
         margin-bottom: $list-margin;
       }
     }
+  }
+
+  &-title {
+    margin-bottom: 0;
   }
 
   &__media {

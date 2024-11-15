@@ -1,12 +1,15 @@
 .about {
-  background-image: linear-gradient(135deg, var(--first-gradient) 0%, var(--second-gradient-bg) 100%);
+  background-image: linear-gradient(
+    135deg,
+    var(--first-gradient) 0%,
+    var(--second-gradient-bg) 100%
+  );
   color: $white-color;
   height: 100%;
   border-top: 0px;
-  padding-bottom: 10%;
 
   @include respond(laptop) {
-    padding: $section-padding 0;
+    padding: $section-padding-laptop 0;
     height: 100%;
   }
 

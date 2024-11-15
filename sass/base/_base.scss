@@ -33,6 +33,10 @@ body {
 
 section {
   padding: $section-padding 0;
+
+  @include respond(laptop) {
+    padding: $section-padding-laptop 0;
+  }
 }
 
 img,
