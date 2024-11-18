@@ -26,6 +26,7 @@
     }
 
     &-field {
+      position: relative;
       margin-bottom: 2rem;
     }
 
@@ -49,6 +50,14 @@
       &::placeholder {
         color: #999;
       }
+    }
+
+    &-error-message {
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      color: $error-color;
+      font-size: $xxsm-font-size;
     }
   }
 }

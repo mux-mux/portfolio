@@ -379,25 +379,25 @@
             action="mailer/send.php"
           >
             <div class="contact__form-field">
-              <label for="name" class="contact__form-label">Name</label>
+              <label for="name" class="contact__form-label">Name*</label>
               <input
                 type="text"
                 name="name"
                 id="name"
-                class="contact__form-input"
+                class="contact__form-input contact__form-validate"
                 placeholder="Enter Your Name"
-                minlength="2"
+                minlength="1"
                 maxlength="90"
                 required
               />
             </div>
             <div class="contact__form-field">
-              <label for="email" class="contact__form-label">Email</label>
+              <label for="email" class="contact__form-label">Email*</label>
               <input
                 type="text"
                 name="email"
                 id="email"
-                class="contact__form-input"
+                class="contact__form-input contact__form-validate"
                 placeholder="Enter Your Email"
                 title="Email format address@xx.xx"
                 pattern="^([^ ]+@[^ ]+\.[a-z]{2,6}|)$"
@@ -409,12 +409,11 @@
               <textarea
                 name="message"
                 id="message"
-                class="contact__form-input"
+                class="contact__form-input contact__form-validate"
                 cols="30"
                 rows="10"
                 placeholder="Enter Your Message"
                 maxlength="1000"
-                required
               ></textarea>
             </div>
             <div class="contact__btn">

@@ -1,7 +1,6 @@
 'use strict';
-'use esversion: 8'; //server rule
+'use esversion: 8';
 
-//Mobile navigation
 const hamburger = document.querySelector('.header__hamburger'),
   openHamburger = hamburger.querySelector('.header__hamburger-open'),
   closeHamburger = hamburger.querySelector('.header__hamburger-close'),
@@ -21,14 +20,15 @@ const toggleMenu = (action) => {
 };
 
 hamburger.addEventListener('click', () => {
-  mobileMenu.classList.contains('header__menu-active') ? toggleMenu() : toggleMenu('open');
+  mobileMenu.classList.contains('header__menu-active')
+    ? toggleMenu()
+    : toggleMenu('open');
 });
 
 mobileMenuLink.forEach((link) => {
   link.addEventListener('click', toggleMenu);
 });
 
-//Theme switcher
 const themeSwither = document.querySelector('.theme__switch-slider'),
   themeChecker = document.querySelector('.theme__switch-toggle');
 
@@ -58,7 +58,52 @@ const toggleTheme = () => {
 
 themeSwither.addEventListener('click', toggleTheme);
 
-//Form submitter
+function validateInput(e, field, messageContainer) {
+  const MINLEN = 2;
+  const MAXLEN = 90;
+
+  const messages = {
+    startWith: 'This field should start with a letter',
+    minSymbols: `This field should be min ${MINLEN} symbols long`,
+    maxSymbols: `This field should be max ${MAXLEN} symbols long`,
+    required: 'This field is required',
+  };
+
+  function isLetter(str) {
+    return /^[A-Za-zА-Яа-я]+$/.test(str);
+  }
+  function clearError(errorContainer) {
+    errorContainer.textContent = '';
+  }
+
+  if (field.value.length === 0) {
+    clearError(messageContainer);
+  } else if (!isLetter(field.value[0])) {
+    messageContainer.textContent = messages.startWith;
+  } else if (field.value.length < MINLEN) {
+    messageContainer.textContent = messages.minSymbols;
+  } else if (field.value.length > MAXLEN) {
+    messageContainer.textContent = messages.maxSymbols;
+  } else {
+    clearError(messageContainer);
+  }
+}
+
+const inputs = document.querySelectorAll('form input, form textarea');
+
+inputs.forEach((inputElement) => {
+  const spanToShowMessage = document.createElement('span');
+  spanToShowMessage.classList.add('contact__form-error-message');
+  inputElement.parentNode.insertBefore(
+    spanToShowMessage,
+    inputElement.nextSibling
+  );
+
+  inputElement.addEventListener('input', (e) => {
+    validateInput(e, inputElement, spanToShowMessage);
+  });
+});
+
 async function submitForm(event) {
   event.preventDefault();
   try {
@@ -77,7 +122,9 @@ async function submitForm(event) {
     const json = await response.json();
     if (json.result === 'success') {
       alert(json.info);
-      document.querySelectorAll('#form input, #form textarea').forEach((inputField) => (inputField.value = ''));
+      document
+        .querySelectorAll('#form input, #form textarea')
+        .forEach((inputField) => (inputField.value = ''));
     } else {
       console.log(json);
       throw json.info;
