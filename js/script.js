@@ -66,7 +66,7 @@ function validateInput(e, field, messageContainer) {
     startWith: 'This field should start with a letter',
     minSymbols: `This field should be min ${MINLEN} symbols long`,
     maxSymbols: `This field should be max ${MAXLEN} symbols long`,
-    emailPattern: 'This field format should be name@email.com',
+    emailPattern: 'This field format should have format name@email.com',
   };
 
   function isLetter(str) {
