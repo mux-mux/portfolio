@@ -66,30 +66,56 @@ function validateInput(e, field, messageContainer) {
     startWith: 'This field should start with a letter',
     minSymbols: `This field should be min ${MINLEN} symbols long`,
     maxSymbols: `This field should be max ${MAXLEN} symbols long`,
-    required: 'This field is required',
+    emailPattern: 'This field format should be name@email.com',
   };
 
   function isLetter(str) {
     return /^[A-Za-zА-Яа-я]+$/.test(str);
   }
+  function isEmail(str) {
+    return /^([^ ]+@[^ ]+\.[a-z]{2,6}|)$/.test(str);
+  }
   function clearError(errorContainer) {
     errorContainer.textContent = '';
   }
 
-  if (field.value.length === 0) {
-    clearError(messageContainer);
-  } else if (!isLetter(field.value[0])) {
-    messageContainer.textContent = messages.startWith;
-  } else if (field.value.length < MINLEN) {
-    messageContainer.textContent = messages.minSymbols;
-  } else if (field.value.length > MAXLEN) {
-    messageContainer.textContent = messages.maxSymbols;
-  } else {
-    clearError(messageContainer);
+  switch (field.name) {
+    case 'name':
+      return validateName();
+    case 'email':
+      return validateEmail();
+    default:
+      throw new Error('no field to validate');
+  }
+
+  function validateName() {
+    if (field.value.length === 0) {
+      clearError(messageContainer);
+    } else if (!isLetter(field.value[0])) {
+      messageContainer.textContent = messages.startWith;
+    } else if (field.value.length < MINLEN) {
+      messageContainer.textContent = messages.minSymbols;
+    } else if (field.value.length > MAXLEN) {
+      messageContainer.textContent = messages.maxSymbols;
+    } else {
+      clearError(messageContainer);
+    }
+  }
+
+  function validateEmail() {
+    if (field.value.length === 0) {
+      clearError(messageContainer);
+    } else if (!isEmail(field.value)) {
+      messageContainer.textContent = messages.emailPattern;
+    } else if (field.value.length > MAXLEN) {
+      messageContainer.textContent = messages.maxSymbols;
+    } else {
+      clearError(messageContainer);
+    }
   }
 }
 
-const inputs = document.querySelectorAll('form input, form textarea');
+const inputs = document.querySelectorAll('#form input');
 
 inputs.forEach((inputElement) => {
   const spanToShowMessage = document.createElement('span');
