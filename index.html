@@ -16,6 +16,32 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
     />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <noscript>
+      <style>
+        .header,
+        .contact__form {
+          background-color: white;
+        }
+        .text-gradient-main,
+        .contact__btn-submit,
+        .main-btn,
+        .main-btn:hover {
+          -webkit-text-fill-color: black;
+          color: black;
+        }
+        .about,
+        .contact {
+          background-color: cornflowerblue;
+        }
+        .theme,
+        .social-footer {
+          display: none;
+        }
+        .contact__noscript {
+          display: flex;
+        }
+      </style>
+    </noscript>
     <title>Mykhaylo`s Kobylyukh Portfolio</title>
   </head>
   <body id="home">
@@ -422,6 +448,9 @@
               </button>
             </div>
           </form>
+        </div>
+        <div class="contact__noscript">
+          You need to enable JavaScript to submit this form
         </div>
       </section>
     </main>
