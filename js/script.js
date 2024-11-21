@@ -66,7 +66,8 @@ function validateInput(e, field, messageContainer) {
     startWith: 'This field should start with a letter',
     minSymbols: `This field should be min ${MINLEN} symbols long`,
     maxSymbols: `This field should be max ${MAXLEN} symbols long`,
-    emailPattern: 'This field format should have name@email.com format',
+    emailPattern: 'This field should have name@email.com format',
+    required: 'This field is required',
   };
 
   function isLetter(str) {
@@ -91,26 +92,37 @@ function validateInput(e, field, messageContainer) {
   function validateName() {
     if (field.value.length === 0) {
       clearError(messageContainer);
+      messageContainer.textContent = messages.required;
+      return 0;
     } else if (!isLetter(field.value[0])) {
       messageContainer.textContent = messages.startWith;
+      return 0;
     } else if (field.value.length < MINLEN) {
       messageContainer.textContent = messages.minSymbols;
+      return 0;
     } else if (field.value.length > MAXLEN) {
       messageContainer.textContent = messages.maxSymbols;
+      return 0;
     } else {
       clearError(messageContainer);
+      return 1;
     }
   }
 
   function validateEmail() {
     if (field.value.length === 0) {
       clearError(messageContainer);
+      messageContainer.textContent = messages.required;
+      return 0;
     } else if (!isEmail(field.value)) {
       messageContainer.textContent = messages.emailPattern;
+      return 0;
     } else if (field.value.length > MAXLEN) {
       messageContainer.textContent = messages.maxSymbols;
+      return 0;
     } else {
       clearError(messageContainer);
+      return 1;
     }
   }
 }
@@ -132,6 +144,22 @@ inputs.forEach((inputElement) => {
 
 async function submitForm(event) {
   event.preventDefault();
+
+  const messageContainer = document.querySelectorAll(
+    '.contact__form-error-message'
+  );
+
+  const { name, email } = event.target.elements;
+
+  validateInput(event, name, messageContainer[0]);
+  validateInput(event, email, messageContainer[1]);
+
+  if (
+    !validateInput(event, name, messageContainer[0]) ||
+    !validateInput(event, email, messageContainer[1])
+  )
+    return;
+
   try {
     const response = await fetch(event.target.action, {
       method: 'POST',
