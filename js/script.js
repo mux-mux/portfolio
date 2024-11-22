@@ -145,20 +145,21 @@ inputs.forEach((inputElement) => {
 async function submitForm(event) {
   event.preventDefault();
 
-  const messageContainer = document.querySelectorAll(
-    '.contact__form-error-message'
-  );
+  function passInputsValidation() {
+    const messageContainer = document.querySelectorAll(
+      '.contact__form-error-message'
+    );
 
-  const { name, email } = event.target.elements;
+    const { name, email } = event.target.elements;
+    let validations = [];
 
-  validateInput(event, name, messageContainer[0]);
-  validateInput(event, email, messageContainer[1]);
+    [name, email].forEach((input, i) => {
+      validations.push(validateInput(event, input, messageContainer[i]));
+    });
 
-  if (
-    !validateInput(event, name, messageContainer[0]) ||
-    !validateInput(event, email, messageContainer[1])
-  )
-    return;
+    return validations.includes(0) ? 0 : 1;
+  }
+  if (!passInputsValidation()) return;
 
   try {
     const response = await fetch(event.target.action, {
