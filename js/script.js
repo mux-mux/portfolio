@@ -161,6 +161,9 @@ async function submitForm(event) {
   }
   if (!passInputsValidation()) return;
 
+  const { button } = event.target.elements;
+  button.setAttribute('disabled', '');
+
   try {
     const response = await fetch(event.target.action, {
       method: 'POST',
@@ -187,6 +190,8 @@ async function submitForm(event) {
   } catch (error) {
     alert(error);
   }
+
+  button.removeAttribute('disabled');
 }
 
 console.log(String.raw`

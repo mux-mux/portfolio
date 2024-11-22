@@ -35,7 +35,11 @@
     var(--first-gradient) 0%,
     var(--second-gradient) 100%
   );
-  border-image: linear-gradient(135deg, var(--second-gradient) 0%, var(--first-gradient) 100%);
+  border-image: linear-gradient(
+    135deg,
+    var(--second-gradient) 0%,
+    var(--first-gradient) 100%
+  );
   -webkit-border-image-slice: 1;
   border-image-slice: 1;
   @include supportIE11() {
@@ -63,7 +67,7 @@
     }
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     -webkit-text-fill-color: $white-color;
     text-decoration: none;
 
@@ -74,6 +78,10 @@
     &::after {
       width: 100%;
     }
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 }
 

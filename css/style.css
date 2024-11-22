@@ -268,14 +268,16 @@ textarea {
     @media only screen and (max-width: 37.5em) {
       .main-btn::after {
         background-image: none; } }
-  .main-btn:hover {
+  .main-btn:hover:not(:disabled) {
     -webkit-text-fill-color: #fff;
     text-decoration: none; }
     @media only screen and (max-width: 37.5em) {
-      .main-btn:hover {
+      .main-btn:hover:not(:disabled) {
         -webkit-text-fill-color: var(--second-gradient); } }
-    .main-btn:hover::after {
+    .main-btn:hover:not(:disabled)::after {
       width: 100%; }
+  .main-btn:disabled {
+    opacity: 0.1; }
 
 .white-btn {
   border: 2px solid #eee; }
