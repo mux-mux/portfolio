@@ -298,12 +298,6 @@ textarea {
     .white-btn:hover::after {
       width: 100%; }
 
-.contact__btn {
-  display: flex;
-  justify-content: center; }
-  .contact__btn-submit {
-    transition: none; }
-
 .social {
   display: flex;
   justify-content: center;
@@ -563,6 +557,18 @@ textarea {
     align-items: center;
     justify-content: center;
     z-index: 2; }
+  .contact__btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px; }
+    .contact__btn-submit {
+      transition: none; }
+    .contact__btn_wrapper {
+      position: relative; }
+
+form svg {
+  position: absolute;
+  display: none; }
 
 .footer {
   background: #555;

@@ -171,6 +171,9 @@ async function submitForm(event) {
     const { button } = event.target.elements;
     button.setAttribute('disabled', '');
 
+    const spinner = event.target.querySelector('svg');
+    spinner.setAttribute('style', 'display:initial');
+
     try {
       const response = await fetch(event.target.action, {
         method: 'POST',
@@ -199,6 +202,7 @@ async function submitForm(event) {
     }
 
     button.removeAttribute('disabled');
+    spinner.removeAttribute('style');
   }
   handleFormSumbit();
 }

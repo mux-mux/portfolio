@@ -77,4 +77,22 @@
     justify-content: center;
     z-index: 2;
   }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    &-submit {
+      transition: none;
+    }
+
+    &_wrapper {
+      position: relative;
+    }
+  }
+}
+
+form svg {
+  position: absolute;
+  display: none;
 }
