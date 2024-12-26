@@ -52,6 +52,12 @@ function addThemeSwitcher() {
   };
 
   (function () {
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', (event) => {
+        event.matches ? setTheme('theme-dark') : setTheme('theme-light');
+      });
+
     if (localStorage.getItem('theme') === 'theme-dark') {
       setTheme('theme-dark');
     } else {
