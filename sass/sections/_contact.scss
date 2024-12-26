@@ -56,8 +56,9 @@
 
     &-error-message {
       position: absolute;
-      bottom: -17px;
+      bottom: 0;
       left: 0;
+      transform: translateY(100%);
       color: $error-color;
       font-size: $xxsm-font-size;
     }

@@ -5,13 +5,14 @@
     background-image: none;
     -webkit-text-fill-color: var(--second-gradient);
   }
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateX(2px);
 
-  &:hover {
-    transform: translateX(2px);
-
-    @include respond(mobile) {
-      &:hover {
-        transform: translateX(0);
+      @include respond(mobile) {
+        &:hover {
+          transform: translateX(0);
+        }
       }
     }
   }

@@ -4,11 +4,13 @@
   gap: 2rem;
 
   &__item {
-    @include hoverRise;
+    @media (prefers-reduced-motion: no-preference) {
+      @include hoverRise;
 
-    @include respond(mobile) {
-      &:hover {
-        transform: translateY(0);
+      @include respond(mobile) {
+        &:hover {
+          transform: translateY(0);
+        }
       }
     }
   }
