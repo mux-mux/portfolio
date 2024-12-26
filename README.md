@@ -45,6 +45,6 @@ $ cd portfolio
 # Install dependencies
 $ npm install
 
-# Open browser & listen to scss changes
-$ npm run dev
+# Open the browser & listen for changes
+$ npm start
 ```

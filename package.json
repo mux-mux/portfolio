@@ -9,8 +9,9 @@
     "build": "npm-run-all scss:prefix scss:compress",
     "scss:compile": "node-sass sass/main.scss css/style.css",
     "scss:watch": "nodemon -e scss -x \"npm run scss:compile\"",
+    "server": "browser-sync start --server -w index.html",
     "dev": "npm-run-all --parallel server scss:watch",
-    "server": "browser-sync start --server -w index.html"
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
