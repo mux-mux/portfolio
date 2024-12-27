@@ -135,9 +135,12 @@ textarea {
     height: 25px;
     margin: 0 5px; }
     .theme__switch-toggle {
-      opacity: 0;
-      width: 0;
-      height: 0; }
+      width: inherit;
+      height: inherit;
+      appearance: none; }
+      .theme__switch-toggle:focus {
+        appearance: normal;
+        -moz-appearance: none; }
     .theme__switch-slider {
       border-radius: 25px;
       position: absolute;

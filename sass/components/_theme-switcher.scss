@@ -21,9 +21,14 @@
     margin: 0 5px;
 
     &-toggle {
-      opacity: 0;
-      width: 0;
-      height: 0;
+      width: inherit;
+      height: inherit;
+      appearance: none;
+
+      &:focus {
+        appearance: normal;
+        -moz-appearance: none;
+      }
     }
 
     &-slider {
