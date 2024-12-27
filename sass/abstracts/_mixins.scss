@@ -24,8 +24,15 @@
 
 @mixin hoverRise {
   transition: all 0.2s ease-in;
+
   &:hover {
     transform: translateY(-2px);
+  }
+}
+
+@mixin pointer-device {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
   }
 }
 
@@ -45,7 +52,8 @@
 }
 
 @mixin supportIE11 {
-  @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  @media screen and (-ms-high-contrast: active),
+    screen and (-ms-high-contrast: none) {
     @content;
   }
 }

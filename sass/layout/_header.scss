@@ -38,13 +38,9 @@
         margin-right: 2px;
       }
 
-      &:hover {
-        color: var(--primary-color);
-      }
-
-      @include respond(mobile) {
+      @include pointer-device {
         &:hover {
-          color: inherit;
+          color: var(--primary-color);
         }
       }
     }
@@ -64,8 +60,10 @@
       font-weight: 700;
       transition: color 0.3s;
 
-      &:hover {
-        color: var(--primary-color);
+      @include pointer-device {
+        &:hover {
+          color: var(--primary-color);
+        }
       }
 
       @include respond(tablet) {
@@ -129,8 +127,10 @@
         border-bottom: 1px solid var(--mobile-border);
         transition: color 0.3s;
 
-        &:hover {
-          color: inherit;
+        @include pointer-device {
+          &:hover {
+            color: inherit;
+          }
         }
 
         i {

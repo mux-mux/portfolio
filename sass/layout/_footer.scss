@@ -28,7 +28,7 @@
 
     @include hoverRise;
 
-    @include respond(mobile) {
+    @include pointer-device {
       &:hover {
         transform: translateY(0);
       }
@@ -46,7 +46,7 @@
     text-decoration: underline;
     padding: 5px 0;
 
-    @media (hover: hover) and (pointer: fine) {
+    @include pointer-device {
       &:hover {
         text-decoration: none;
       }

@@ -5,12 +5,8 @@
 
   &__item {
     @media (prefers-reduced-motion: no-preference) {
-      @include hoverRise;
-
-      @include respond(mobile) {
-        &:hover {
-          transform: translateY(0);
-        }
+      @include pointer-device {
+        @include hoverRise;
       }
     }
   }

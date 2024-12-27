@@ -44,8 +44,11 @@
   border-image-slice: 1;
   @include supportIE11() {
     color: var(--second-gradient) !important;
-    &:hover {
-      color: $white-color !important;
+
+    @include pointer-device {
+      &:hover {
+        color: $white-color !important;
+      }
     }
   }
 
@@ -67,16 +70,14 @@
     }
   }
   @media (prefers-reduced-motion: no-preference) {
-    &:hover:not(:disabled) {
-      -webkit-text-fill-color: $white-color;
-      text-decoration: none;
+    @include pointer-device {
+      &:hover:not(:disabled) {
+        -webkit-text-fill-color: $white-color;
+        text-decoration: none;
 
-      @include respond(mobile) {
-        -webkit-text-fill-color: var(--second-gradient);
-      }
-
-      &::after {
-        width: 100%;
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -101,16 +102,14 @@
     }
   }
   @media (prefers-reduced-motion: no-preference) {
-    &:hover {
-      -webkit-text-fill-color: var(--second-gradient);
-      text-decoration: none;
+    @include pointer-device {
+      &:hover {
+        -webkit-text-fill-color: var(--second-gradient);
+        text-decoration: none;
 
-      @include respond(mobile) {
-        -webkit-text-fill-color: #eee;
-      }
-
-      &::after {
-        width: 100%;
+        &::after {
+          width: 100%;
+        }
       }
     }
   }

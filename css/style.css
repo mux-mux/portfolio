@@ -80,12 +80,10 @@ textarea {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent; } }
-  @media (prefers-reduced-motion: no-preference) {
-    .text-gradient-main:hover {
-      transform: translateX(2px); } }
-  @media only screen and (prefers-reduced-motion: no-preference) and (max-width: 37.5em) {
-    .text-gradient-main:hover:hover {
-      transform: translateX(0); } }
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .text-gradient-main:hover {
+    transform: translateX(2px); } }
 
 .theme-light {
   --bg_color: #fff;
@@ -256,9 +254,10 @@ textarea {
       color: transparent; } }
   @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     .main-btn {
-      color: var(--second-gradient) !important; }
-      .main-btn:hover {
-        color: #fff !important; } }
+      color: var(--second-gradient) !important; } }
+  @media screen and (-ms-high-contrast: active) and (hover: hover) and (pointer: fine), screen and (-ms-high-contrast: none) and (hover: hover) and (pointer: fine) {
+    .main-btn:hover {
+      color: #fff !important; } }
   @media only screen and (max-width: 37.5em) {
     .main-btn {
       background-image: none;
@@ -269,16 +268,13 @@ textarea {
     @media only screen and (max-width: 37.5em) {
       .main-btn::after {
         background-image: none; } }
-  @media (prefers-reduced-motion: no-preference) {
-    .main-btn:hover:not(:disabled) {
-      -webkit-text-fill-color: #fff;
-      text-decoration: none; } }
-  @media only screen and (prefers-reduced-motion: no-preference) and (max-width: 37.5em) {
-    .main-btn:hover:not(:disabled) {
-      -webkit-text-fill-color: var(--second-gradient); } }
-  @media (prefers-reduced-motion: no-preference) {
-      .main-btn:hover:not(:disabled)::after {
-        width: 100%; } }
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .main-btn:hover:not(:disabled) {
+    -webkit-text-fill-color: #fff;
+    text-decoration: none; }
+    .main-btn:hover:not(:disabled)::after {
+      width: 100%; } }
   .main-btn:disabled {
     opacity: 0.1; }
 
@@ -292,29 +288,24 @@ textarea {
     @media only screen and (max-width: 37.5em) {
       .white-btn::after {
         background: none; } }
-  @media (prefers-reduced-motion: no-preference) {
-    .white-btn:hover {
-      -webkit-text-fill-color: var(--second-gradient);
-      text-decoration: none; } }
-  @media only screen and (prefers-reduced-motion: no-preference) and (max-width: 37.5em) {
-    .white-btn:hover {
-      -webkit-text-fill-color: #eee; } }
-  @media (prefers-reduced-motion: no-preference) {
-      .white-btn:hover::after {
-        width: 100%; } }
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .white-btn:hover {
+    -webkit-text-fill-color: var(--second-gradient);
+    text-decoration: none; }
+    .white-btn:hover::after {
+      width: 100%; } }
 
 .social {
   display: flex;
   justify-content: center;
   gap: 2rem; }
-  @media (prefers-reduced-motion: no-preference) {
-    .social__item {
-      transition: all 0.2s ease-in; }
-      .social__item:hover {
-        transform: translateY(-2px); } }
-  @media only screen and (prefers-reduced-motion: no-preference) and (max-width: 37.5em) {
+
+@media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
+  .social__item {
+    transition: all 0.2s ease-in; }
     .social__item:hover {
-      transform: translateY(0); } }
+      transform: translateY(-2px); } }
   .social__link {
     font-size: 3rem;
     line-height: 3rem; }
@@ -357,11 +348,9 @@ textarea {
       .header__logo-subtext i {
         font-size: 1.6rem;
         margin-right: 2px; }
-      .header__logo-subtext:hover {
-        color: var(--primary-color); }
-      @media only screen and (max-width: 37.5em) {
+      @media (hover: hover) and (pointer: fine) {
         .header__logo-subtext:hover {
-          color: inherit; } }
+          color: var(--primary-color); } }
   .header__menu-list {
     display: flex; }
   .header__menu-link {
@@ -372,8 +361,9 @@ textarea {
     letter-spacing: 1px;
     font-weight: 700;
     transition: color 0.3s; }
-    .header__menu-link:hover {
-      color: var(--primary-color); }
+    @media (hover: hover) and (pointer: fine) {
+      .header__menu-link:hover {
+        color: var(--primary-color); } }
     @media only screen and (max-width: 56.25em) {
       .header__menu-link {
         padding: 3rem 1.6rem; } }
@@ -414,9 +404,11 @@ textarea {
         color: var(--text_color);
         text-align: right;
         border-bottom: 1px solid var(--mobile-border);
-        transition: color 0.3s; }
-        .header__menu-link:hover {
-          color: inherit; }
+        transition: color 0.3s; } }
+    @media only screen and (max-width: 37.5em) and (hover: hover) and (pointer: fine) {
+      .header__menu-link:hover {
+        color: inherit; } }
+  @media only screen and (max-width: 37.5em) {
         .header__menu-link i {
           margin-right: 5px; } }
 
@@ -596,7 +588,7 @@ form svg {
     transition: all 0.2s ease-in; }
     .footer__to-top:hover {
       transform: translateY(-2px); }
-    @media only screen and (max-width: 37.5em) {
+    @media (hover: hover) and (pointer: fine) {
       .footer__to-top:hover {
         transform: translateY(0); } }
   .footer__list {
