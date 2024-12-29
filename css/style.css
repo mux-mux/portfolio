@@ -592,7 +592,8 @@ form svg {
     display: grid;
     grid-template-columns: repeat(auto-fit, 150px);
     justify-content: center;
-    gap: 50px; }
+    gap: 50px;
+    text-align: left; }
   .footer__to-top {
     display: inline-block;
     padding: 4rem;
