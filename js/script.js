@@ -43,15 +43,7 @@ function addThemeSwitcher() {
       : themeChecker.removeAttribute('checked');
   };
 
-  const toggleTheme = () => {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-      setTheme('theme-light');
-    } else {
-      setTheme('theme-dark');
-    }
-  };
-
-  (function () {
+  const getTheme = () => {
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', (event) => {
@@ -63,6 +55,18 @@ function addThemeSwitcher() {
     } else {
       setTheme('theme-light');
     }
+  };
+
+  const toggleTheme = () => {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
+    } else {
+      setTheme('theme-dark');
+    }
+  };
+
+  (function () {
+    getTheme();
   })();
 
   themeSwither.addEventListener('click', toggleTheme);
