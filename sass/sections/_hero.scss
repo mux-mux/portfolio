@@ -12,10 +12,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: 5rem;
-
-    @include respond(laptop) {
-      flex-direction: column;
-    }
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
   }
 }
