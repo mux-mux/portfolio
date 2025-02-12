@@ -241,23 +241,20 @@
             </p>
             <ul class="about__list mb-20">
               <li>
-                Show paste position when dragging task (center point
-                calculation)
+                Efficiently remove event listeners (debugging the code and using
+                Chrome DevTools EventListeners Tab)
               </li>
               <li>
-                Error when starting Pomodoro and then dragging it (unremoved
-                events)
+                Restore Tab key focus after DOM was reRendered (assigning each
+                task a unique ID, and inside it query focused element class
+                names)
               </li>
               <li>
-                Pomodoro was started with a delay of 1 second after a pause
-                (call update ticker immediately after resuming)
+                Keep the Pomodoro timer live after DOM reRenders (store the
+                current pomodoro state and timer in the localStorage object)
               </li>
             </ul>
 
-            <p class="paragraph__text paragraph-white mb-30">
-              I solved these problems by googling, debugging and even
-              ChatGPTing😊
-            </p>
             <h4 class="heading-quaternary tc">FindFace</h4>
             <p class="paragraph__text paragraph-white">
               After Kanban project I wanted to create some usefull tool with
@@ -268,16 +265,26 @@
               most tricky ones):
             </p>
             <ul class="about__list mb-30">
-              <li>Local DB connection (access to env varables)</li>
-              <li>No data access error (has no DB return)</li>
-              <li>Redis promise pending... (use async await)</li>
               <li>
-                Unshown alert component for incorrect credentials (unthrown
-                error)
+                Postgess DB connection error (accessing environment variables
+                using the dot env package instead of React env)
+              </li>
+              <li>
+                Redis DB connection error (checking and debbuging the code step
+                by step due to Vercel Redis KV documentation)
+              </li>
+              <li>
+                API keys leaks in the Chrome DevTools Network Tab (move ClarifAI
+                image request/respond to the server-side instead of client one)
+              </li>
+              <li>
+                Unresponsive alert component for incorrect credentials
+                (correcting throw error block that was preventing the alert from
+                displaying)
               </li>
             </ul>
             <p class="paragraph__text paragraph-white mb-30">
-              Debbuging, goggling and ChatGPTing has helped me to deal with
+              Debbuging, researching and ChatGPTing has helped me to deal with
               these dinosaurus🦖
             </p>
             <h3 class="heading-tertiary tc mb-20">Next</h3>
