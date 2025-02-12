@@ -26,9 +26,11 @@ body {
 }
 
 .container {
+  min-width: 32rem;
   max-width: 120rem;
   margin: auto;
-  width: 95%;
+  height: 100%;
+  padding: 0 2rem;
 }
 
 section {
