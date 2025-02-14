@@ -333,7 +333,8 @@ textarea {
     padding: 1rem 0; }
 
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   min-height: 9rem;
   z-index: 1000;
@@ -432,10 +433,7 @@ textarea {
 
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 80rem;
-  max-height: 120rem;
-  padding: 0;
+  min-height: 100vh;
   background-color: var(--bg_color); }
   .hero__intro {
     height: 100%;
