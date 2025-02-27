@@ -267,21 +267,22 @@
             </p>
             <ul class="about__list mb-30">
               <li>
-                Postgess DB connection error (accessing environment variables
-                using the dot env package instead of React env)
-              </li>
-              <li>
-                Redis DB connection error (checking and debbuging the code step
-                by step due to Vercel Redis KV documentation)
-              </li>
-              <li>
                 API keys leaks in the Chrome DevTools Network Tab (move ClarifAI
                 image request/respond to the server-side instead of client one)
               </li>
               <li>
-                Unresponsive alert component for incorrect credentials
-                (correcting throw error block that was preventing the alert from
-                displaying)
+                Update multiple database values simultaneously (referring to the
+                Knex.js documentation and using database transactions)
+              </li>
+              <li>
+                Download images with applied filters due to a CORS error (deploy
+                the CORS Everywhere package and handle image download requests
+                through a CORS proxy)
+              </li>
+              <li>
+                User profile image updates by uploading images to the Vercel
+                server read-only error (use Amazon S3 for image storage and save
+                the image URLs in the database)
               </li>
             </ul>
             <p class="paragraph__text paragraph-white mb-30">
