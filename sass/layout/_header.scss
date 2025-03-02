@@ -113,9 +113,7 @@
 
       &-item {
         background-color: var(--bg_color);
-        &:first-child a {
-          border-top: 1px solid var(--mobile-border);
-        }
+        border-top: 1px solid var(--mobile-border);
       }
 
       &-link {
@@ -125,7 +123,6 @@
         font-size: $lg-font-size;
         color: var(--text_color);
         text-align: right;
-        border-bottom: 1px solid var(--mobile-border);
         transition: color 0.3s;
 
         @include pointer-device {
