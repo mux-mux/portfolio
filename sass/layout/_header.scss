@@ -103,17 +103,26 @@
 
       &-list {
         flex-direction: column;
+        height: calc(100% - 9rem);
       }
 
       &-active {
         transition: all 0.3s;
         visibility: visible;
         opacity: 1;
+        height: 100vh;
+        background-color: var(--bg_color);
       }
 
       &-item {
         background-color: var(--bg_color);
-        border-top: 1px solid var(--mobile-border);
+        &:not(:last-of-type) {
+          border-top: 1px solid var(--mobile-border);
+        }
+
+        &-social {
+          margin-top: auto;
+        }
       }
 
       &-link {

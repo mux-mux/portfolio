@@ -13,10 +13,12 @@ function toggleMobileHamburger() {
       mobileMenu.classList.add('header__menu-active');
       openHamburger.classList.add('d-none');
       closeHamburger.classList.remove('d-none');
+      document.documentElement.style.overflow = 'hidden';
     } else {
       mobileMenu.classList.remove('header__menu-active');
       openHamburger.classList.remove('d-none');
       closeHamburger.classList.add('d-none');
+      document.documentElement.style.overflow = 'auto';
     }
   };
 
