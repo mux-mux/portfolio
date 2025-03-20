@@ -46,13 +46,14 @@ function addThemeSwitcher() {
   };
 
   const getTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    savedTheme && setTheme(savedTheme);
+
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addEventListener('change', (event) => {
         event.matches ? setTheme('theme-dark') : setTheme('theme-light');
       });
-
-    toggleTheme();
   };
 
   const toggleTheme = () => {
