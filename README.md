@@ -11,21 +11,6 @@
   <br>
 </div>
 
-## Stages :scroll:
-
-1. html_structure
-2. common_styles
-3. header
-4. hero section
-5. about section
-6. projects section
-7. contact section
-8. footer
-9. responsive
-10. accessible
-11. refactoring
-12. testing
-
 ## Folder structure :open_file_folder:
 
 <div align="center">
