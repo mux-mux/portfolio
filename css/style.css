@@ -57,6 +57,7 @@ section {
 
 img,
 video {
+  max-width: 850px;
   width: 100%;
   height: auto;
   object-fit: contain; }
@@ -529,8 +530,6 @@ textarea {
         margin-bottom: 20px; }
   .projects-title {
     margin-bottom: 0; }
-  .projects__media {
-    flex: 1 50rem; }
 
 .contact {
   position: relative;
