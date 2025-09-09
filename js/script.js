@@ -47,7 +47,7 @@ function addThemeSwitcher() {
 
   const getTheme = () => {
     const savedTheme = localStorage.getItem('theme');
-    savedTheme && setTheme(savedTheme);
+    savedTheme ? setTheme(savedTheme) : setTheme('theme-light');
 
     window
       .matchMedia('(prefers-color-scheme: dark)')
