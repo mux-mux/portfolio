@@ -1,3 +1,6 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .cta-btn {
   display: inline-block;
   position: relative;
@@ -23,7 +26,7 @@
 }
 
 .main-btn {
-  @include supportColorForIE11();
+  @include mixins.supportColorForIE11();
   border-width: 2px;
   border-style: solid;
   -moz-border-image: -moz-linear-gradient(
@@ -43,17 +46,17 @@
   );
   -webkit-border-image-slice: 1;
   border-image-slice: 1;
-  @include supportIE11() {
+  @include mixins.supportIE11() {
     color: var(--second-gradient) !important;
 
-    @include pointer-device {
+    @include mixins.pointer-device {
       &:hover {
-        color: $white-color !important;
+        color: variables.$white-color !important;
       }
     }
   }
 
-  @include respond(mobile) {
+  @include mixins.respond(mobile) {
     background-image: none;
     border: 2px solid var(--second-gradient);
     -webkit-text-fill-color: var(--second-gradient);
@@ -66,14 +69,14 @@
       var(--first-gradient) 100%
     );
 
-    @include respond(mobile) {
+    @include mixins.respond(mobile) {
       background-image: none;
     }
   }
   @media (prefers-reduced-motion: no-preference) {
-    @include pointer-device {
+    @include mixins.pointer-device {
       &:hover:not(:disabled) {
-        -webkit-text-fill-color: $white-color;
+        -webkit-text-fill-color: variables.$white-color;
         text-decoration: none;
 
         &::after {
@@ -91,19 +94,19 @@
 .white-btn {
   border: 2px solid #eee;
 
-  @include respond(mobile) {
+  @include mixins.respond(mobile) {
     background-image: none;
   }
 
   &::after {
     background: #eee;
 
-    @include respond(mobile) {
+    @include mixins.respond(mobile) {
       background: none;
     }
   }
   @media (prefers-reduced-motion: no-preference) {
-    @include pointer-device {
+    @include mixins.pointer-device {
       &:hover {
         -webkit-text-fill-color: var(--second-gradient);
         text-decoration: none;

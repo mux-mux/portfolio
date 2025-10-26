@@ -1,13 +1,16 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
 .projects {
   background-color: var(--bg_color);
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
-    padding: $section-padding 0;
+    padding: variables.$section-padding 0;
 
-    @include respond(laptop) {
-      padding: $section-padding-laptop 0;
+    @include mixins.respond(laptop) {
+      padding: variables.$section-padding-laptop 0;
     }
 
     &:not(:last-of-type) {
@@ -26,15 +29,15 @@
 
     &-stages {
       display: inline-block;
-      font-size: $lg-font-size;
+      font-size: variables.$lg-font-size;
       font-weight: 700;
     }
 
     &-stage {
-      font-size: $xsm-font-size;
+      font-size: variables.$xsm-font-size;
 
       &:last-of-type {
-        margin-bottom: $list-margin;
+        margin-bottom: variables.$list-margin;
       }
     }
   }

@@ -1,25 +1,28 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .heading-primary {
-  font-size: $xxxl-font-size;
+  font-size: variables.$xxxl-font-size;
   font-weight: 700;
 
-  @include respond(tablet) {
-    font-size: $xxl-font-size;
+  @include mixins.respond(tablet) {
+    font-size: variables.$xxl-font-size;
   }
 }
 .section__title {
-  margin-bottom: $section-title-margin;
-  font-size: $xxxl-font-size;
+  margin-bottom: variables.$section-title-margin;
+  font-size: variables.$xxxl-font-size;
   font-weight: bold;
   text-transform: uppercase;
 
-  @include respond(tablet) {
-    font-size: $xl-font-size;
+  @include mixins.respond(tablet) {
+    font-size: variables.$xl-font-size;
     margin-bottom: 2rem;
   }
 }
 
 .title-white {
-  color: $white-color;
+  color: variables.$white-color;
 }
 
 .title-dark {
@@ -29,11 +32,11 @@
 .heading-tertiary {
   font-size: 2.8rem;
 
-  @include respond(tablet) {
+  @include mixins.respond(tablet) {
     font-size: 2.2rem;
   }
 }
 
 .heading-quaternary {
-  font-size: $default-font-size;
+  font-size: variables.$default-font-size;
 }

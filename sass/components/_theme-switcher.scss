@@ -1,16 +1,19 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .theme {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: $sm-font-size;
+  font-size: variables.$sm-font-size;
   color: var(--text_color);
   margin-left: 2rem;
 
-  @include respond(tablet) {
+  @include mixins.respond(tablet) {
     margin: 0;
   }
-  @include respond(mobile) {
-    padding: $header-link-padding;
+  @include mixins.respond(mobile) {
+    padding: variables.$header-link-padding;
   }
 
   &__switch {
@@ -45,7 +48,7 @@
       &:before {
         content: '';
         border-radius: 50%;
-        background-color: $white-color;
+        background-color: variables.$white-color;
         font-family: penciicon;
         position: absolute;
         content: '';

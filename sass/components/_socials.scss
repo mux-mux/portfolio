@@ -1,3 +1,6 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .social {
   display: flex;
   justify-content: center;
@@ -5,14 +8,14 @@
 
   &__item {
     @media (prefers-reduced-motion: no-preference) {
-      @include pointer-device {
-        @include hoverRise;
+      @include mixins.pointer-device {
+        @include mixins.hoverRise;
       }
     }
   }
 
   &__link {
-    font-size: $xxl-font-size;
+    font-size: variables.$xxl-font-size;
     line-height: 3rem;
   }
 
@@ -23,7 +26,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    @include respond(mobile) {
+    @include mixins.respond(mobile) {
       display: none;
     }
   }
@@ -31,7 +34,7 @@
   &-mobile {
     display: none;
 
-    @include respond(mobile) {
+    @include mixins.respond(mobile) {
       position: static;
       transform: none;
       inset: 0;

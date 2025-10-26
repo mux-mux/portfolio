@@ -1,3 +1,6 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .header {
   position: sticky;
   top: 0;
@@ -13,7 +16,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5rem;
-    @include respond(tablet) {
+    @include mixins.respond(tablet) {
       padding: 0 2rem;
     }
   }
@@ -24,22 +27,22 @@
     padding: 2rem 0;
 
     &-name {
-      font-size: $xsm-font-size;
+      font-size: variables.$xsm-font-size;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 1px;
     }
 
     &-subtext {
-      font-size: $xsm-font-size;
+      font-size: variables.$xsm-font-size;
       transition: color 0.3s;
 
       i {
-        font-size: $sm-font-size;
+        font-size: variables.$sm-font-size;
         margin-right: 2px;
       }
 
-      @include pointer-device {
+      @include mixins.pointer-device {
         &:hover {
           color: var(--primary-color);
         }
@@ -53,21 +56,21 @@
     }
 
     &-link {
-      padding: $header-link-padding;
+      padding: variables.$header-link-padding;
       display: inline-block;
-      font-size: $sm-font-size;
+      font-size: variables.$sm-font-size;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 700;
       transition: color 0.3s;
 
-      @include pointer-device {
+      @include mixins.pointer-device {
         &:hover {
           color: var(--primary-color);
         }
       }
 
-      @include respond(tablet) {
+      @include mixins.respond(tablet) {
         padding: 3rem 1.6rem;
       }
 
@@ -79,9 +82,9 @@
 
   &__hamburger {
     display: none;
-    font-size: $xl-font-size;
+    font-size: variables.$xl-font-size;
 
-    @include respond(mobile) {
+    @include mixins.respond(mobile) {
       display: block;
     }
 
@@ -91,7 +94,7 @@
     }
   }
 
-  @include respond(mobile) {
+  @include mixins.respond(mobile) {
     &__menu {
       position: absolute;
       width: 100%;
@@ -127,13 +130,13 @@
       &-link {
         background-color: var(--bg_color);
         display: block;
-        padding: $header-link-padding;
-        font-size: $lg-font-size;
+        padding: variables.$header-link-padding;
+        font-size: variables.$lg-font-size;
         color: var(--text_color);
         text-align: right;
         transition: color 0.3s;
 
-        @include pointer-device {
+        @include mixins.pointer-device {
           &:hover {
             color: inherit;
           }

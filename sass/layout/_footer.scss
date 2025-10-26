@@ -1,6 +1,9 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .footer {
   background: #555;
-  color: $white-color;
+  color: variables.$white-color;
 
   .container {
     & > :nth-child(2n) {
@@ -25,11 +28,11 @@
   &__to-top {
     display: inline-block;
     padding: 4rem;
-    font-size: $lg-font-size;
+    font-size: variables.$lg-font-size;
 
-    @include hoverRise;
+    @include mixins.hoverRise;
 
-    @include pointer-device {
+    @include mixins.pointer-device {
       &:hover {
         transform: translateY(0);
       }
@@ -37,17 +40,17 @@
   }
 
   &__list {
-    font-size: $xsm-font-size;
+    font-size: variables.$xsm-font-size;
     text-align: left;
   }
 
   &__link {
     display: inline-block;
-    font-size: $xsm-font-size;
+    font-size: variables.$xsm-font-size;
     text-decoration: underline;
     padding: 5px 0;
 
-    @include pointer-device {
+    @include mixins.pointer-device {
       &:hover {
         text-decoration: none;
       }

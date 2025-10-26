@@ -1,24 +1,24 @@
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/utilities';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'abstracts/utilities';
 
-@import 'base/base';
+@use 'base/base';
 
-@import 'themes/gradients';
-@import 'themes/light';
-@import 'themes/dark';
+@use 'themes/gradients';
+@use 'themes/light';
+@use 'themes/dark';
 
-@import 'components/theme-switcher';
-@import 'components/headings';
-@import 'components/paragraphs';
-@import 'components/logo';
-@import 'components/buttons';
-@import 'components/socials';
+@use 'components/theme-switcher';
+@use 'components/headings';
+@use 'components/paragraphs';
+@use 'components/logo';
+@use 'components/buttons';
+@use 'components/socials';
 
-@import 'layout/header';
-@import 'layout/main';
-@import 'sections/hero';
-@import 'sections/about';
-@import 'sections/projects';
-@import 'sections/contact';
-@import 'layout/footer';
+@use 'layout/header';
+@use 'layout/main';
+@use 'sections/hero';
+@use 'sections/about';
+@use 'sections/projects';
+@use 'sections/contact';
+@use 'layout/footer';

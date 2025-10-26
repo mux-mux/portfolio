@@ -1,21 +1,24 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 .about {
   background-image: linear-gradient(
     135deg,
     var(--first-gradient) 0%,
     var(--second-gradient-bg) 100%
   );
-  color: $white-color;
+  color: variables.$white-color;
   height: 100%;
   border-top: 0px;
 
-  @include respond(laptop) {
-    padding: $section-padding-laptop 0;
+  @include mixins.respond(laptop) {
+    padding: variables.$section-padding-laptop 0;
     height: 100%;
   }
 
   &__list {
-    margin-left: $list-margin;
-    font-size: $xsm-font-size;
+    margin-left: variables.$list-margin;
+    font-size: variables.$xsm-font-size;
 
     & > li {
       list-style: initial;
@@ -30,16 +33,16 @@
     }
 
     &-skill {
-      font-size: $xsm-font-size;
+      font-size: variables.$xsm-font-size;
       margin: 2px 0;
 
       &:last-of-type {
-        margin-bottom: $list-margin;
+        margin-bottom: variables.$list-margin;
       }
 
       i {
         width: 2.5rem;
-        font-size: $lg-font-size;
+        font-size: variables.$lg-font-size;
         margin-right: 1rem;
       }
     }

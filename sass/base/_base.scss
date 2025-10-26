@@ -1,3 +1,6 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
 *,
 *::after,
 *::before {
@@ -13,7 +16,7 @@ html {
     scroll-behavior: smooth;
   }
 
-  @include respond(4K) {
+  @include mixins.respond(4K) {
     font-size: 100%;
   }
 }
@@ -34,10 +37,10 @@ body {
 }
 
 section {
-  padding: $section-padding 0;
+  padding: variables.$section-padding 0;
 
-  @include respond(laptop) {
-    padding: $section-padding-laptop 0;
+  @include mixins.respond(laptop) {
+    padding: variables.$section-padding-laptop 0;
   }
 }
 

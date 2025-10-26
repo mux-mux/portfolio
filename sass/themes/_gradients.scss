@@ -1,12 +1,14 @@
-.text-gradient-main {
-  @include supportColorForIE11();
+@use '../abstracts/mixins';
 
-  @include respond(phone) {
+.text-gradient-main {
+  @include mixins.supportColorForIE11();
+
+  @include mixins.respond(phone) {
     background-image: none;
     -webkit-text-fill-color: var(--second-gradient);
   }
   @media (prefers-reduced-motion: no-preference) {
-    @include pointer-device {
+    @include mixins.pointer-device {
       &:hover {
         transform: translateX(2px);
       }

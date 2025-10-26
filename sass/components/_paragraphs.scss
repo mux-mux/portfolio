@@ -1,7 +1,9 @@
+@use '../abstracts/variables';
+
 .paragraph__text {
-  font-size: $default-font-size;
+  font-size: variables.$default-font-size;
 }
 
 .paragraph-white {
-  color: $white-color;
+  color: variables.$white-color;
 }

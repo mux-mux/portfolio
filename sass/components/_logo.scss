@@ -1,3 +1,5 @@
+@use '../abstracts/mixins';
+
 .logo {
   border-radius: 50%;
   background-color: var(--primary-color);
@@ -9,7 +11,7 @@
     margin-right: 1.5rem;
     flex-shrink: 0;
 
-    @include respond(tablet) {
+    @include mixins.respond(tablet) {
       width: 4.5rem;
       height: 4.5rem;
       margin-right: 1.2rem;
@@ -20,7 +22,7 @@
     flex-shrink: 0;
     width: 11rem;
 
-    @include respond(laptop) {
+    @include mixins.respond(laptop) {
       margin: 0 auto;
       order: -1;
     }

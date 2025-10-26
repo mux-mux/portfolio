@@ -1,3 +1,5 @@
+@use '../abstracts/mixins';
+
 .hero {
   padding: 0;
   display: flex;
@@ -16,7 +18,7 @@
     gap: 3rem;
     padding: 5rem 10rem;
 
-    @include respond(mobile) {
+    @include mixins.respond(mobile) {
       padding: 5rem 0;
     }
   }
